@@ -50,7 +50,7 @@ $(document).ready(function(){
 });
 
 
-
+// #contact-form > .send-btn  Click Effect
 const button = document.querySelector('#contact-section .send-btn');
 const submit = document.querySelector('#contact-section .submit');
 const contactForm   = document.getElementById("contact-form");
@@ -65,7 +65,7 @@ function toggleClass(e) {
 function addClass() {
     if(!this.classList.contains("finished")) {
         this.classList.add('finished');
-        
+
         setTimeout(function(){
             button.disabled = false;
             contactForm.reset();
