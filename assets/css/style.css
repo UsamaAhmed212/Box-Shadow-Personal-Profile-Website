@@ -231,7 +231,29 @@ h1,h2,h3,h4,h5,h6,p {
     font-family: 'Roboto', Arial, sans-serif;
     color: #fff;
     text-transform: uppercase;
-    margin-bottom: 30px;
+    margin-bottom: 130px;
+    position: relative;
+    z-index: 1;
+}
+
+.section-title::before,
+.section-title::after {
+    position: absolute;
+    content: "";
+    height: 50px;
+    width: 2px;
+    left: 50%;
+    margin-left: -6px;
+    z-index: -1;
+    top: calc(100% + 25px);
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    background: linear-gradient(rgb(0, 123, 255) 0%, rgba(0, 123, 255, 0.055) 100%);
+}
+
+.section-title::before {
+    height: 35px;
+    left: calc(50% + 6px);
 }
 
 
@@ -257,3 +279,47 @@ h1,h2,h3,h4,h5,h6,p {
     display: none;
 }
 
+
+/* Service Section Css */
+#box-shadow-section-wrapper .box-shadow-section #service-section {
+    padding-top: 70px;
+}
+
+#box-shadow-section-wrapper .box-shadow-section #service-section .service-box {
+    text-align: center;
+    background-color: #fff;
+    margin: 15px 0px;
+    padding: 30px 16px;
+    min-height: 250px;
+    -webkit-border-radius: 6px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 6px;
+    -moz-background-clip: padding;
+    border-radius: 6px;
+    background-clip: padding-box;
+    -webkit-box-shadow: 0 7px 20px -10px rgb(171 171 171 / 70%);
+    -moz-box-shadow: 0 7px 20px -10px rgba(171,171,171,.7);
+    box-shadow: 0 7px 20px -10px rgb(171 171 171 / 70%);
+    /* border: 1px solid rgb(34, 34, 34); */
+    -webkit-transition: all .55s ease;
+    -moz-transition: all .55s ease;
+    -o-transition: all .55s ease;
+    transition: all .55s ease;
+}
+
+#box-shadow-section-wrapper .box-shadow-section #service-section .service-box .service-logo {
+    padding-bottom: 20px;
+}
+
+#box-shadow-section-wrapper .box-shadow-section #service-section .service-box .service-logo svg {
+    width: 45px;
+}
+
+#box-shadow-section-wrapper .box-shadow-section #service-section .service-box h2 {
+    font-size: 1.8rem;
+    padding-bottom: 10px;
+}
+
+#box-shadow-section-wrapper .box-shadow-section #service-section .service-box p {
+
+}
