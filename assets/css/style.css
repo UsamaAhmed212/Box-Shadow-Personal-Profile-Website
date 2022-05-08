@@ -1,0 +1,96 @@
+@import url("../fonts/nunito_sans/nunito_sans.css");
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: "Nunito Sans", Arial, sans-serif;
+    background: radial-gradient(circle at 50% 10%, #e6dfd9, #e4ddd7, #ddd6d0, #d4ccc7, #c8bfbb, #bbb2af, #aea4a2, #a19796, #958b8b, #8c8283, #857c7d, #837a7b);
+}
+
+/* Header Area Css */
+#header {
+    margin-top: -900px;
+}
+
+#header .header-section {
+
+}
+
+#header .header-section .navbar {
+    margin: 0px 68px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#header .header-section .navbar #navbarNav ul li {
+    padding: 5px 20px;
+}
+
+#header .header-section .navbar #navbarNav ul li a {
+    display: inline-block;
+    position: relative;
+    padding: 0;
+    font-weight: 400;
+    font-size: 16px;
+    color: #87b19e;
+    color: #fff;
+    /* background: linear-gradient(to right, #ff00c8, #005fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+}
+
+#header .header-section .navbar #navbarNav ul li a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: #18c761;
+    background: linear-gradient(90deg, rgba(59,62,217,1) 0%, rgba(173,45,180,1) 75%, rgba(201,41,171,1) 96%, rgba(232,36,160,1) 100%);
+    /* background: linear-gradient(90deg, #0072ff 0%, #00d4ff 100%); */
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    -moz-transform: scaleX(0);
+    -ms-transform: scaleX(0);
+    -o-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    -ms-transition: all 0.3s ease-in-out 0s;
+    -o-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+#header .header-section .navbar #navbarNav ul li a.active::before {
+    /* color: #729581 ; */
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    -moz-transform: scaleX(1);
+    -ms-transform: scaleX(1);
+    -o-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+#header .header-section .navbar #navbarNav ul li a:hover::before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    -moz-transform: scaleX(1);
+    -ms-transform: scaleX(1);
+    -o-transform: scaleX(1);
+    transform: scaleX(1);
+} 
+
+/* Background Image Css */
+#background-image {
+
+}
+
+#background-image img {
+    width: 100%;
+    min-height: 800px;
+    height: auto;
+}
+
+
+

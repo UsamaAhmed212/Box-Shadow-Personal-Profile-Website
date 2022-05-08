@@ -1,0 +1,97 @@
+@font-face {
+    font-family: "Nunito Sans";
+    src:    url("./nunitosans-extralight.ttf") format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Nunito Sans";
+    src:    url("./nunitosans-extralightitalic.ttf") format('truetype');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Nunito Sans";
+    src:    url("./nunitosans-light.ttf") format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Nunito Sans";
+    src:    url("./nunitosans-lightitalic.ttf") format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Nunito Sans";
+    src:    url("./nunitosans-regular.ttf") format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Nunito Sans";
+    src:    url("./nunitosans-italic.ttf") format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Nunito Sans";
+    src:    url("./nunitosans-semibold.ttf") format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Nunito Sans";
+    src:    url("./nunitosans-semibolditalic.ttf") format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Nunito Sans";
+    src:    url("./nunitosans-bold.ttf") format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Nunito Sans";
+    src:    url("./nunitosans-bolditalic.ttf") format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Nunito Sans";
+    src:    url("./nunitosans-extrabold.ttf") format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Nunito Sans";
+    src:    url("./nunitosans-extrabolditalic.ttf") format('truetype');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Nunito Sans";
+    src:    url("./nunitosans-black.ttf") format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Nunito Sans";
+    src:    url("./nunitosans-blackitalic.ttf") format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
