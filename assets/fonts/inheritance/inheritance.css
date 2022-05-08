@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "Inheritance";
+    src:    url("./inheritance.eot");
+    src:    url("./inheritance.eot?#iefix") format('embedded-opentype'),
+            url("./inheritance.woff2") format('woff2'),
+            url("./inheritance.woff") format('woff'),
+            url("./inheritance.ttf") format('truetype'),
+            url('./inheritance.svg') format('svg');
+}

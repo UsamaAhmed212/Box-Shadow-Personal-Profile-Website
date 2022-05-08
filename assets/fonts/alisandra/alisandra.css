@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "Alisandra";
+    src:    url("./alisandra.eot");
+    src:    url("./alisandra.eot?#iefix") format('embedded-opentype'),
+            url("./alisandra.woff2") format('woff2'),
+            url("./alisandra.woff") format('woff'),
+            url("./alisandra.ttf") format('truetype'),
+            url('./alisandra.svg') format('svg');
+}
