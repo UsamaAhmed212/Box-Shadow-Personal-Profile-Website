@@ -420,3 +420,189 @@ h1,h2,h3,h4,h5,h6,p {
     cursor: pointer;
     letter-spacing: 2px;
 }
+
+/* Contact Section Css */
+#box-shadow-section-wrapper .box-shadow-section #contact-section {
+    padding-top: 50px;
+}
+#box-shadow-section-wrapper .box-shadow-section #contact-section #contact-form {
+    padding: 10px;
+}
+
+#box-shadow-section-wrapper .box-shadow-section #contact-section #contact-form .form-control {
+    margin-bottom: 12px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.568);
+    background-color: #45424B;
+    background-clip: padding-box;
+    border: none;
+    border-radius: 5px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: none;
+    -webkit-box-shadow: none;
+    -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    -o-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+}
+
+#box-shadow-section-wrapper .box-shadow-section #contact-section #contact-form .form-control::placeholder {
+    color: #949398;
+}
+
+.form-control:focus, .form-control:active {
+    transform: translateY(1px);
+}
+
+#box-shadow-section-wrapper .box-shadow-section #contact-section #contact-form .name,
+#box-shadow-section-wrapper .box-shadow-section #contact-section #contact-form .email {
+    height: 55px;
+}
+
+#box-shadow-section-wrapper .box-shadow-section #contact-section #contact-form .send-btn {
+    min-width: 170px;
+    min-height: 45px;
+    color: #fff;
+    margin: 0 auto;
+    padding: 12px 31px;
+    border: none;
+    border-radius: 3px;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    text-transform: capitalize;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+#box-shadow-section-wrapper .box-shadow-section #contact-section #contact-form .send-btn {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 12.5rem;
+    padding: 1.5rem 3.125rem;
+    background: linear-gradient(to right, rgb(19, 69, 230) 0%, rgb(237, 35, 159) 51%, rgb(19, 69, 230) 100%) 0% 0% / 200%;
+    background: linear-gradient(135deg, #9ff669 0%, #31de79 100%);
+    border: none;
+    border-radius: 0.3125rem;
+    box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.2);
+    color: white;
+    font-weight: 300;
+    text-transform: uppercase;
+    overflow: hidden;
+}
+
+#box-shadow-section-wrapper .box-shadow-section #contact-section #contact-form .send-btn:before {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: #54d98c;
+}
+
+#box-shadow-section-wrapper .box-shadow-section #contact-section #contact-form .send-btn span {
+    position: absolute;
+    line-height: 0;
+}
+
+#box-shadow-section-wrapper .box-shadow-section #contact-section #contact-form .send-btn span i {
+    transform-origin: center center;
+}
+
+#box-shadow-section-wrapper .box-shadow-section #contact-section #contact-form .send-btn span:nth-of-type(1) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#box-shadow-section-wrapper .box-shadow-section #contact-section #contact-form .send-btn span:nth-of-type(2) {
+    top: 100%;
+    transform: translateY(0%);
+    font-size: 24px;
+}
+
+#box-shadow-section-wrapper .box-shadow-section #contact-section #contact-form .send-btn span:nth-of-type(3) {
+    display: none;
+}
+
+#box-shadow-section-wrapper .box-shadow-section #contact-section #contact-form .active {
+    background: #2ecc71;
+}
+
+#box-shadow-section-wrapper .box-shadow-section #contact-section #contact-form .active:before {
+    width: 100%;
+    transition: width 3s linear;
+}
+
+#box-shadow-section-wrapper .box-shadow-section #contact-section #contact-form .active span:nth-of-type(1) {
+    top: -100%;
+    transform: translateY(-50%);
+}
+
+#box-shadow-section-wrapper .box-shadow-section #contact-section #contact-form .active span:nth-of-type(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#box-shadow-section-wrapper .box-shadow-section #contact-section #contact-form .active span:nth-of-type(2) i {
+    animation: loading 500ms linear infinite;
+}
+
+#box-shadow-section-wrapper .box-shadow-section #contact-section #contact-form .active span:nth-of-type(3) {
+    display: none;
+}
+
+#box-shadow-section-wrapper .box-shadow-section #contact-section #contact-form .finished {
+    background: linear-gradient(to right, #23bdb8 0%, #43e794 51%, #23bdb8 100%) 0% 0% / 200%;
+    background-position: right center;
+}
+
+#box-shadow-section-wrapper .box-shadow-section #contact-section #contact-form .finished .submit {
+    display: none;
+}
+
+#box-shadow-section-wrapper .box-shadow-section #contact-section #contact-form .finished .loading {
+    display: none;
+}
+
+#box-shadow-section-wrapper .box-shadow-section #contact-section #contact-form .finished .check {
+    display: block !important;
+    font-size: 24px;
+    animation: scale 0.5s linear;
+}
+
+#box-shadow-section-wrapper .box-shadow-section #contact-section #contact-form .finished .check i {
+    transform-origin: center center;
+}
+
+@keyframes loading {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(10);
+    }
+    50% {
+        transform: scale(0.2);
+    }
+    70% {
+        transform: scale(1.2);
+    }
+    90% {
+        transform: scale(0.7);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

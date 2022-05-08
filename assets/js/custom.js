@@ -51,3 +51,31 @@ $(document).ready(function(){
 
 
 
+const button = document.querySelector('#contact-section .send-btn');
+const submit = document.querySelector('#contact-section .submit');
+const contactForm   = document.getElementById("contact-form");
+
+function toggleClass(e) {
+    e.preventDefault();
+    if(!this.classList.contains("finished")) {
+        this.classList.toggle('active');
+        button.disabled = true;
+    }
+}
+function addClass() {
+    if(!this.classList.contains("finished")) {
+        this.classList.add('finished');
+        
+        setTimeout(function(){
+            button.disabled = false;
+            contactForm.reset();
+            button.classList.remove("finished");
+        }, 1000);
+    }
+}
+
+
+button.addEventListener('click', toggleClass);
+button.addEventListener('transitionend', toggleClass);
+button.addEventListener('transitionend', addClass);
+
