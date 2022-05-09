@@ -122,6 +122,35 @@ h1,h2,h3,h4,h5,h6,p {
 
 
 /* About Section Css */
+#about-box-shadow-wrapper .about-box-shadow-section #about-section .about-content .cursor {
+    color: #fff;
+    font-size: 40px;
+    line-height: 25px;
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+}
+
+#about-box-shadow-wrapper .about-box-shadow-section #about-section .about-content .cursor.blink {
+    display: inline-block;
+    background-color: #ccc;
+    margin-left: 0.1rem;
+    width: 2px;
+    animation: blink 1s infinite;
+  }
+  
+  @keyframes blink {
+     0% {
+       opacity: 1;
+     }
+     50% {
+       opacity: 0;
+     }
+     100% {
+       opacity: 1;
+     }
+  }
+
 #about-box-shadow-wrapper .about-box-shadow-section #about-section {
     min-height: 745px;
     max-height: 745px;
@@ -161,14 +190,19 @@ h1,h2,h3,h4,h5,h6,p {
     font-weight: 700;
     font-size: 70px;
     text-align: center;
+
 }
+
+#about-box-shadow-wrapper .about-box-shadow-section #about-section .about-content .about-heading .cursor.blink{
+    height: 62px;
+    line-height: 85px;
+}
+
 
 /* #about-section > .about-content > .about-description */
 #about-box-shadow-wrapper .about-box-shadow-section #about-section .about-content .about-heading-description span {
     font-family: 'Alisandra', 'Inheritance', Arial, sans-serif;
     font-size: 22px;
-    min-height: 35px;
-    display: block;
 }
 
 #about-box-shadow-wrapper .about-box-shadow-section #about-section .about-content .about-description {

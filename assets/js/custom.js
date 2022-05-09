@@ -1,5 +1,5 @@
 "use strict";
-window.addEventListener('load', function(event) {
+window.onload = function() {
     // .nav-link to Add Class .active and Others .nav-link to Remove Class .active
     const nav_link = document.querySelectorAll("#navbarNav .nav-link");
     nav_link.forEach( function (element) {
@@ -118,28 +118,19 @@ window.addEventListener('load', function(event) {
 
         });
     });
+    
 
     // Type Js 01
-    var typed = new Typed('.type_js_01', {
-        stringsElement: '.type_js_get_01',
-            typeSpeed: 100,
-            backSpeed: 100,
-            backDelay: 3000,
-            loop: true,
-            smartBackspace: true,
-            showCursor: false
+    Typed('.typed_js_set_01', {
+        stringsElement: '.typed_js_get_01',
+        backDelay : 3000,
+        showCursor : false
     });
-
+    
     // Type Js 02
-    var typed = new Typed('.type_js_02', {
-        stringsElement: '.type_js_get_02',
-            typeSpeed: 100,
-            backSpeed: 100,
-            startDelay: 1500,
-            backDelay: 5000,
-            loop: true,
-            smartBackspace: true,
-            showCursor: false
+    Typed('.typed_js_set_02', {
+        stringsElement: '.typed_js_get_02',
+            backDelay: 3000,
     });
 
 
@@ -171,7 +162,8 @@ window.addEventListener('load', function(event) {
     button.addEventListener('transitionend', toggleClass);
     button.addEventListener('transitionend', addClass);
 
-});
+}
+
 
 
 
