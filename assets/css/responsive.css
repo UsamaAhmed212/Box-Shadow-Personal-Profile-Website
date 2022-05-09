@@ -1,13 +1,3 @@
-/* Header Area Css */
-#menu-toggle {
-    display: none;
-}
-
-.sidebar-menu-close {
-    display: none;
-}
-
-
 /* 
     ##Device = Mobiles, Tablets, Ipads (portrait)
     ##Screen = B/w 0px to 1199px
@@ -15,295 +5,9 @@
 @media only screen and (max-width: 1199px) {
     /* #about-box-shadow-wrapper > .about-box-shadow-section Css */
     #about-box-shadow-wrapper .about-box-shadow-section,
-    #box-shadow-wrapper .box-shadow-section,
-    #header .header-section .navbar {
+    #box-shadow-wrapper .box-shadow-section {
         margin: 0px;
     }
-
-}
-
-
-/* 
-    ##Device = Mobiles, Tablets, Ipads (portrait)
-    ##Screen = B/w 0px to 1024px
-*/
-
-/* #header > #menu-toggle Css */
-@media only screen and (max-width: 1024px) {
-/* Responsive Menu Toggle  */
-/* #header > #menu-toggle Effect Css */
-    #menu-toggle {
-        display: block;
-        margin-left: auto;
-    }
-
-    #menu-toggle span {
-        display: block;
-        background: #ccc;
-        border-radius: 2px;
-        -webkit-transition: 0.25s ease-in-out;
-        -moz-transition: 0.25s ease-in-out;
-        transition: 0.25s ease-in-out;
-        box-sizing: border-box;
-    }
-
-    #menu-toggle {
-        width: 50px;
-        height: 50px;
-        position: relative;
-        cursor: pointer;
-        background: transparent;
-        border-radius: 5px;
-    }
-
-    #menu-toggle:hover {
-        background: transparent;
-    }
-
-    #menu-toggle #hamburger {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-    }
-
-    #menu-toggle #hamburger span {
-        width: 80%;
-        height: 3px;
-        position: relative;
-        top: 10%;
-        left: 10%;
-        margin: 8px 0;
-    }
-
-    #menu-toggle #hamburger span:nth-child(1) {
-        transition-delay: 0.5s;
-    }
-
-    #menu-toggle #hamburger span:nth-child(2) {
-        transition-delay: 0.625s;
-    }
-
-    #menu-toggle #hamburger span:nth-child(3) {
-        transition-delay: 0.75s;
-    }
-
-    #menu-toggle #cross {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        transform: rotate(45deg);
-    }
-
-    #menu-toggle #cross span:nth-child(1) {
-        height: 0%;
-        width: 3px;
-        position: absolute;
-        top: 10%;
-        left: 46%;
-        transition-delay: 0s;
-    }
-
-    #menu-toggle #cross span:nth-child(2) {
-        width: 0%;
-        height: 3px;
-        position: absolute;
-        left: 10%;
-        top: 48%;
-        transition-delay: 0.25s;
-    }
-
-    #menu-toggle.open #hamburger span {
-        width: 0%;
-    }
-
-    #menu-toggle.open #hamburger span:nth-child(1) {
-        transition-delay: 0s;
-    }
-
-    #menu-toggle.open #hamburger span:nth-child(2) {
-        transition-delay: 0.125s;
-    }
-
-    #menu-toggle.open #hamburger span:nth-child(3) {
-        transition-delay: 0.25s;
-    }
-    
-    #menu-toggle.open #cross span:nth-child(1) {
-        height: 80%;
-        transition-delay: 0.625s;
-    }
-    #menu-toggle.open #cross span:nth-child(2) {
-        width: 80%;
-        transition-delay: 0.375s;
-    }
-
-    /* Header Area Css */
-    #header .header-section .navbar #navbarNav ul.navbar-nav > li {
-        padding: 5px 5px 5px 25px;
-    }
-
-    #header .header-section .navbar #navbarNav ul li a {
-        color: #95979d;
-        font-family: "Roboto Mono", monospace;
-        font-size: 17px;
-        font-weight: 400;
-        letter-spacing: 1px;
-        line-height: 1.6;
-    }
-    
-    #header .header-section .navbar #navbarNav ul li:hover > ul.sub-menu {
-        position: relative;
-    }
-
-    /* Responsive #navbarNav  */
-    /* #header > #navbarNav Css */
-    #header .header-section .navbar #navbarNav ul li ul.sub-menu {
-        width: unset;
-        height: 0;
-        display: block;
-        box-shadow: none;
-        margin: 0;
-        padding: 0 0 0 15px;
-        position: relative;
-        opacity: 1;
-        visibility: visible;
-        background: transparent;
-        top: 0 !important;
-        left: 0 !important;
-        bottom: 0 !important;
-        overflow-y: hidden;
-        transition: .0s;
-    }
-
-    #header .sidebar-menu .navbar-nav {
-        -webkit-flex-direction: column;
-        -moz-flex-direction: column;
-        flex-direction: column;
-    }
-
-    #header .sidebar-menu .sidebar-menu-close {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        text-align: center;
-        justify-content: center;
-        display: block;
-        position: absolute;
-        top: 10px;
-        right: 15px;
-        z-index: 1;
-        background-color: transparent;
-    }
-
-    #header .sidebar-menu .sidebar-menu-close>span:before,
-    #header .sidebar-menu .sidebar-menu-close>span:after {
-        position: absolute;
-        content: "";
-        width: 2px;
-        height: 27px;
-        background: #ccc;
-    }
-
-    #header .sidebar-menu .sidebar-menu-close>span:before {
-        transform: rotate(45deg);
-    }
-
-    #header .sidebar-menu .sidebar-menu-close>span:after {
-        transform: rotate(-45deg);
-    }
-    
-
-    #header .sidebar-menu .navbar-nav .nav-item a::after {
-        display: none;
-    }
-    #header .sidebar-menu .navbar-nav .nav-item .active {
-        border: none;
-    }
-    
-    /* #header > .sidebar-menu Css */
-    #header .sidebar-menu.active {
-        transform: translateX(272px);
-    }
-
-    #header .sidebar-menu {
-        display: block !important;
-        background-color: #fff;
-        position: fixed;
-        z-index: 10001;
-        width: 272px;
-        height: 100%;
-        top: 0;
-        left: -272px;
-        padding-top: 50px;
-        -webkit-box-shadow: 0px 5px 17px rgb(0 0 0 / 17%), 0px 0.893452px 3.79717px rgb(0 0 0 / 10%), 0px 0.266004px 1.13052px rgb(0 0 0 / 7%);
-        -moz-box-shadow: 0px 5px 17px rgb(0 0 0 / 17%), 0px 0.893452px 3.79717px rgb(0 0 0 / 10%), 0px 0.266004px 1.13052px rgb(0 0 0 / 7%);
-        box-shadow: 0px 5px 17px rgb(0 0 0 / 17%), 0px 0.893452px 3.79717px rgb(0 0 0 / 10%), 0px 0.266004px 1.13052px rgb(0 0 0 / 7%);
-        overflow-y: auto;
-        transition: all .3s ease;
-    }
-    #header .sidebar-menu ul {
-        padding: 0;
-    }
-
-    #header .sidebar-menu .navbar-nav ul li {
-        padding: 0 20px;
-    }
-
-    #header  .sidebar-menu .navbar-nav ul li a {
-        display: block;
-        color: #95979d;
-        text-decoration: none;
-        margin: 0;
-        padding: 8px 0;
-    }
-    
-    #header .sidebar-menu ul li a {
-        color: #95979d;
-    }
-    
-    /* #header > .sidebar-menu > .sub-menu Css */
-    #header .header-section .navbar #navbarNav ul.sub-menu {
-        width: unset;
-        height: 0;
-        display: block;
-        box-shadow: none;
-        margin: 0;
-        padding: 0 0 0 20px;
-        position: relative;
-        opacity: 1;
-        visibility: visible;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        overflow-y: hidden;
-        transition: .0s;
-    }
-
-    #header .header-section .navbar #navbarNav ul li {
-        padding: 4px 0px;
-    }
-
-    /* #header > .sidebar-menu > .sub-toggle Css */
-    #header .sidebar-menu .sub-toggle {
-        display: inline-flex;
-        align-items: center;
-        position: absolute;
-        top: 0;
-        right: 0;
-        padding: 12px 15px;
-    }
-    
-    #header .sidebar-menu .sub-toggle svg {
-        fill: #95979d;
-        transform: rotate(90deg);
-        cursor: pointer;
-        transition: .2s;
-    }
-    
-    #header .sidebar-menu .sub-toggle.open svg {
-        transform: rotate(-90deg);
-    }
-
 }
 
 
@@ -312,6 +16,16 @@
     ##Screen = B/w 0px to 991px
 */
 @media only screen and (max-width: 991px) {
+    /* Background Image Area Css */
+    #background-image img {
+        object-fit: cover;
+    }
+    
+    /* About Box Shadow Section Css */
+    #box-shadow-wrapper .box-shadow-section #skills-section .skill-item {
+        margin-bottom: 36px;
+    }
+
     /*  #about-section > .about-content Css */
     #about-box-shadow-wrapper .about-box-shadow-section #about-section .about-content {
         padding: 50px;
@@ -330,7 +44,12 @@
     ##Screen = B/w 0px to 768px
 */
 @media only screen and (max-width: 768px) {
-    /* about-section > .about-content > .about-btn */
+    /* #about-box-shadow-wrapper and #box-shadow-wrapper Css */
+    #about-box-shadow-wrapper, #box-shadow-wrapper {
+        padding: 0 28px;
+    }
+
+    /* #about-section > .about-content > .about-btn */
     #about-box-shadow-wrapper .about-box-shadow-section #about-section .about-content .about-btn a {
         margin-right: auto;
     }
@@ -341,11 +60,17 @@
         width: 100%;
     }
 
-    /* #Portfolio-section > .portfolio-content Css */
-    #box-shadow-wrapper .box-shadow-section #Portfolio-section .portfolio-content {
-        margin: 12px 8px;
+    /* Service Section > .service-box Css */
+    #box-shadow-wrapper .box-shadow-section #service-section .service-box {
+        padding: 15px 8px;
     }
 
+    /* About Box Shadow Section Css */
+    #box-shadow-wrapper .box-shadow-section #skills-section .skill-item {
+        margin-bottom: 32px;
+    }
+
+    /* #Portfolio-section Css */
     #box-shadow-wrapper .box-shadow-section #skill-section .skill-item {
         margin-bottom: 35px;
     }
@@ -358,8 +83,25 @@
     #box-shadow-wrapper .box-shadow-section #service-section {
         margin-bottom: 70px;
     }
-}
 
+    #box-shadow-wrapper .box-shadow-section #Portfolio-section .portfolio-content {
+        min-height: 190px;
+        max-height: 190px;
+        margin: 0;
+    }
+
+    #box-shadow-wrapper .box-shadow-section #Portfolio-section .portfolio-content img {
+        min-height: 190px;
+        max-height: 190px;
+        object-fit: cover;
+    }
+
+    /* #contact-section > #contact-form */
+    #box-shadow-wrapper .box-shadow-section #contact-section #contact-form > * {
+        padding: 7px;
+    }
+
+}
 
 
 /* 
@@ -367,43 +109,56 @@
     ##Screen = B/w 0px to 575px
 */
 @media only screen and (max-width: 575px) {
-    /* About Box Shadow Section and Box Shadow Section Css */
-    #about-box-shadow-wrapper,#box-shadow-wrapper {
-        padding: 0 20px;
+    /* #contact-section > #contact-form */
+    #box-shadow-wrapper .box-shadow-section #contact-section {
+        padding: 0 8px;
+        padding-top: 50px;
+    }
+
+    #box-shadow-wrapper .box-shadow-section #contact-section #contact-form > * {
+        padding: 0px;
     }
 }
+
 
 /* 
     ##Device = Mobiles (portrait)
     ##Screen = B/w 0px to 499px
 */
 @media only screen and (max-width: 499px) {
-    /* #about-section > .about-logo Css */
-    #about-box-shadow-wrapper .about-box-shadow-section #about-section .about-logo h1 {
+    /* #about-section Css */
+    #about-box-shadow-wrapper .about-box-shadow-section #about-section .about-heading h1 {
         font-size: 40px;
     }
 
-    #about-box-shadow-wrapper .about-box-shadow-section #about-section .about-content .about-heading h1 {
-        font-size: 65px;
+    #about-box-shadow-wrapper .about-box-shadow-section #about-section .about-content .about-heading-title h1 {
+        font-size: 56px;
     }
 
     #about-box-shadow-wrapper .about-box-shadow-section #about-section .about-content {
         padding: 25px;
     }
 
-    /* #Portfolio-section > .portfolio-content Css */
+    
+    /* #Portfolio-section Css */
     #box-shadow-wrapper .box-shadow-section #Portfolio-section .section-title p {
         max-width: 100%;
     }
+
+    #box-shadow-wrapper .box-shadow-section #Portfolio-section .portfolio-loader > div {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
 }
+
 
 /* 
     ##Device = Mobiles (portrait)
-    ##Screen = B/w 0px to 414px
+    ##Screen = B/w 0px to 416px
 */
 @media only screen and (max-width: 416px) {
     /* #about-section Css */
-    #about-box-shadow-wrapper .about-box-shadow-section #about-section .about-logo h1 {
+    #about-box-shadow-wrapper .about-box-shadow-section #about-section .about-heading h1 {
         font-size: 30px;
         padding: 0px 10px;
     }
@@ -413,16 +168,14 @@
         margin-top: 30px;
     }
 
-    #about-box-shadow-wrapper .about-box-shadow-section #about-section .about-content .about-heading {
+    #about-box-shadow-wrapper .about-box-shadow-section #about-section .about-content .about-heading-title {
         min-height: 130px;
     }
 
-    #about-box-shadow-wrapper .about-box-shadow-section #about-section .about-content .about-heading h1 {
+    #about-box-shadow-wrapper .about-box-shadow-section #about-section .about-content .about-heading-title h1 {
         font-size: 45px;
     }
     
-
-    /* #about-section > .about-content > .about-description */
     #about-box-shadow-wrapper .about-box-shadow-section #about-section .about-content .about-description {
         padding: 10px 0;
     }
@@ -430,7 +183,7 @@
     #about-box-shadow-wrapper .about-box-shadow-section #about-section .about-content .about-description p {
         line-height: 1.6;
     }
-    
+
     /* #about-section and #service-section Css */
     #about-box-shadow-wrapper .about-box-shadow-section #about-section .about-content .about-description,
     #box-shadow-wrapper .box-shadow-section #service-section .service-box p {
@@ -443,12 +196,16 @@
     }
 
     /* #Portfolio-section Css */
-    #box-shadow-wrapper .box-shadow-section #Portfolio-section .portfolio-content img {
-        min-height: auto;
-        -webkit-object-fit: scale-down;
-        -moz-object-fit: scale-down;
-           object-fit: scale-down;
+    #box-shadow-wrapper .box-shadow-section #Portfolio-section .portfolio-content {
+        min-height: 145px;
+        max-height: 145px;
     }
+
+    #box-shadow-wrapper .box-shadow-section #Portfolio-section .portfolio-content img {
+        min-height: 145px;
+        max-height: 145px;
+    }
+
 
     #box-shadow-wrapper .box-shadow-section #Portfolio-section .portfolio-loader .more-portfolio {
         margin-right: 1px;
@@ -458,33 +215,40 @@
         margin-left: 1px;
     }
 
-    #box-shadow-wrapper .box-shadow-section #Portfolio-section .portfolio-loader > div {
-        margin-top: 5px;
-        margin-bottom: 5px;
-    }
-
-    #box-shadow-wrapper .box-shadow-section #Portfolio-section .portfolio-loader a {
-        min-width: 120px;
-        padding: 12px 10px;
-        letter-spacing: 0px;
-    }
-
     /* #contact-section > #contact-form Css */
     #box-shadow-wrapper .box-shadow-section #contact-section #contact-form .form-control.message {
         min-height: 85px;
     }
 }
 
+
+/* 
+    ##Device = Mobiles (portrait)
+    ##Screen = B/w 0px to 382px
+*/
+@media only screen and (max-width: 382px) {
+    /* #about-section Css */
+    #about-box-shadow-wrapper .about-box-shadow-section #about-section .about-content .about-heading-title_social_icons {
+        text-align: center;
+    }
+
+    #about-box-shadow-wrapper .about-box-shadow-section #about-section .about-content .about-heading-title_social_icons a {
+        margin: 0 8px;
+    }
+
+    /* #Portfolio-section Css */
+    #box-shadow-wrapper .box-shadow-section #Portfolio-section .portfolio-loader .more-portfolio,
+    #box-shadow-wrapper .box-shadow-section #Portfolio-section .portfolio-loader .all-portfolio {
+        min-width: 12.5rem;
+    }
+}
+
+
 /* 
     ##Device = Mobiles (portrait)
     ##Screen = B/w 0px to 299px
 */
 @media only screen and (max-width: 299px) {
-    /* Header Area Css */
-    #header .header-section .navbar > div {
-        padding: 0 10px;
-    }
-
     /* About Box Shadow Section and Box Shadow Section Css */
     #about-box-shadow-wrapper,#box-shadow-wrapper {
         padding: 0;
@@ -496,19 +260,19 @@
     }
 
     /* #about-section Css */
-    #about-box-shadow-wrapper .about-box-shadow-section #about-section .about-content .about-heading {
+    #about-box-shadow-wrapper .about-box-shadow-section #about-section .about-content .about-heading-title {
         min-height: 110px;
     }
 
-    #about-box-shadow-wrapper .about-box-shadow-section #about-section .about-logo {
+    #about-box-shadow-wrapper .about-box-shadow-section #about-section .about-heading {
         margin-top: -70px;
     }
 
-    #about-box-shadow-wrapper .about-box-shadow-section #about-section .about-logo h1 {
-        font-size: 25px;
+    #about-box-shadow-wrapper .about-box-shadow-section #about-section .about-heading h1 {
+        font-size: 27px;
     }
 
-    #about-box-shadow-wrapper .about-box-shadow-section #about-section .about-content .about-heading h1 {
+    #about-box-shadow-wrapper .about-box-shadow-section #about-section .about-content .about-heading-title h1 {
         font-size: 40px;
     }
 
@@ -516,32 +280,18 @@
     #box-shadow-wrapper .box-shadow-section #contact-section #contact-form .form-control.message {
         min-height: 80px;
     }
-
-    /* Footer Section Css */
-    #box-shadow-wrapper .box-shadow-section #footer-section p a {
-        display: block;
-        margin: 2px 0;
-    }
 }
+
 
 /* 
     ##Device = Mobiles (portrait)
     ##Screen = B/w 0px to 265px
 */
 @media only screen and (max-width: 265px) {
-    /* #header > .sidebar-menu Css */
-    #header .sidebar-menu {
-        width: 100%;
-    }
-
     /* #Portfolio-section Css */
     #box-shadow-wrapper .box-shadow-section #Portfolio-section .portfolio-loader a {
         min-width: 165px;
         padding: 12px 31px;
-    }
-
-    #box-shadow-wrapper .box-shadow-section #Portfolio-section .portfolio-content {
-        margin: 10px 8px;
     }
 
     /* #contact-section > #contact-form Css */
@@ -550,37 +300,44 @@
     }
 }
 
+
 /* 
     ##Device = Mobiles (portrait)
     ##Screen = B/w 0px to 239px
 */
 @media only screen and (max-width: 239px) {
-    /* Header Area Css */
-    #header .header-section .navbar .navbar-brand {
-        margin-right: 5px;
-    }
-
     /* #about-section Css */
-    #about-box-shadow-wrapper .about-box-shadow-section #about-section .about-logo h1 {
-        font-size: 22px;
+    #about-box-shadow-wrapper .about-box-shadow-section #about-section .about-heading h1 {
+        font-size: 21px;
     }
 
-    #about-box-shadow-wrapper .about-box-shadow-section #about-section .about-content .about-heading h1 {
-        font-size: 34px;
+    #about-box-shadow-wrapper .about-box-shadow-section #about-section .about-content .about-heading-title h1 {
+        font-size: 32px;
     }
 
+    #about-box-shadow-wrapper .about-box-shadow-section #about-section .about-content .about-heading-title-description span {
+        font-size: 20px;
+    }
     /* Service Section Css */
     #box-shadow-wrapper .box-shadow-section #service-section .service-box h4 {
         font-size: 16px;
     }
-
-    /* Contact Section Css */
-    #box-shadow-wrapper .box-shadow-section #contact-section #contact-form .send-btn {
-        width: auto;
+    /* #Portfolio-section Css */
+    #box-shadow-wrapper .box-shadow-section #Portfolio-section .portfolio-loader .more-portfolio, #box-shadow-wrapper .box-shadow-section #Portfolio-section .portfolio-loader .all-portfolio {
+        min-width: 11.5rem;
     }
 
+    #box-shadow-wrapper .box-shadow-section #Portfolio-section .portfolio-loader a {
+        min-width: unset;
+        padding: 12px 0px;
+    }
+
+    /* Contact Section Css */
     #box-shadow-wrapper .box-shadow-section #service-section .service-box {
         padding: 15px 5px;
     }
     
+    #box-shadow-wrapper .box-shadow-section #contact-section #contact-form .send-btn {
+        width: 11.5rem;
+    }
 }
