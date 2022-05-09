@@ -4,7 +4,7 @@ window.onload = function() {
     var loader = document.querySelector(".loader");
     if (loader.classList !== "loader-hidden") {
         loader.classList.add('loader-hidden');
-        enableScroll()
+        enableScroll();
         loader.addEventListener('transitionend', function(e) {
             loader.classList.add('loader-disable');
         }, {
@@ -140,19 +140,8 @@ window.onload = function() {
         });
     });
     
-
-    // Type Js 01
-    Typed('.typed_js_set_01', {
-        stringsElement: '.typed_js_get_01',
-        backDelay : 3000,
-        showCursor : false
-    });
-    
-    // Type Js 02
-    Typed('.typed_js_set_02', {
-        stringsElement: '.typed_js_get_02',
-            backDelay: 3000,
-    });
+    // Typed.js
+    Typed();
 
     // Images Lazy loading
      function loadImage(e) {

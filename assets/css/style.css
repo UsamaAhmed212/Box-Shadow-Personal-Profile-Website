@@ -444,34 +444,73 @@ img[data-src] {
 
 
 /* About Section Css */
-#about-box-shadow-wrapper .about-box-shadow-section #about-section .about-content .cursor {
-    color: #fff;
-    font-size: 40px;
-    line-height: 25px;
-    font-weight: 400;
-    text-align: center;
-    text-decoration: none;
+.typed {
+    display: inline-block;
 }
 
-#about-box-shadow-wrapper .about-box-shadow-section #about-section .about-content .cursor.blink {
+.typed span {
+    display: inline-block;
+}
+ 
+.typed .typed-texts {
+    overflow: hidden;
+    vertical-align: top;
+    position: relative;
+    text-align: left;
+}
+ 
+.typed .typed-texts::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background-color: #fff;
+}
+ 
+.typed .typed-texts span {
+    position: absolute;
+    white-space: nowrap;
+    left: 0;
+    top: 0;
+}
+ 
+.typed .typed-texts span {
+     opacity: 0;
+}
+ 
+.typed .typed-texts span.type {
+     opacity: 1;
+     position: relative;
+}
+ 
+.typed .typed-texts span.hide {
+    opacity: 0;
+}
+ 
+.typed .typed-texts.blink::after {
     display: inline-block;
     background-color: #ccc;
-    margin-left: 0.1rem;
-    width: 2px;
     animation: blink 1s infinite;
-  }
-  
-  @keyframes blink {
-     0% {
+}
+ 
+.typed .typed-texts.cursor-hide::after {
+    display: none;
+} 
+ 
+@keyframes blink {
+    0% {
        opacity: 1;
-     }
-     50% {
+    }
+    50% {
        opacity: 0;
-     }
-     100% {
+    }
+    100% {
        opacity: 1;
-     }
-  }
+    }
+}
+ 
 
 #about-box-shadow-wrapper .about-box-shadow-section #about-section {
     min-height: 745px;
@@ -515,11 +554,13 @@ img[data-src] {
 
 }
 
-#about-box-shadow-wrapper .about-box-shadow-section #about-section .about-content .about-heading .cursor.blink{
-    height: 62px;
-    line-height: 85px;
+#about-box-shadow-wrapper .about-box-shadow-section #about-section .about-content .about-heading h1.typed {
+    width: 100%;
 }
 
+#about-box-shadow-wrapper .about-box-shadow-section #about-section .about-content .about-heading h1.typed > span:first-child {
+    display: block;
+}
 
 /* #about-section > .about-content > .about-description */
 #about-box-shadow-wrapper .about-box-shadow-section #about-section .about-content .about-heading-description span {
