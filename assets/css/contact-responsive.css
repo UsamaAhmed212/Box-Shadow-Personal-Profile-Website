@@ -1,0 +1,84 @@
+/* 
+    ##Device = Mobiles, Tablets, Ipads (portrait)
+    ##Screen = B/w 0px to 768px
+*/
+@media only screen and (max-width: 768px) {
+    /* Contact Section Css */
+    #contact-section-wrapper {
+        padding: 0px 24px;
+    }
+
+    #contact-section-wrapper .contact-text .text-box-inline {
+        padding-left: 0px;
+    }
+
+    #contact-section-wrapper .contact-text .text-box-inline .subtitle {
+        position: initial;
+        display: inline;
+    }
+
+    #contact-section-wrapper .contact-text .text-box-inline .subtitle::before {
+        display: none;
+    }
+
+    #contact-section-wrapper .contact-text .text-box-inline .subtitle::after {
+        content: "";
+        display: block;
+        height: 2px;
+        width: 60px;
+        background-color: #9E9E9E;
+        margin-top: 5px;
+        margin-bottom: 16px;
+    }
+}
+
+
+/* 
+    ##Device = Mobiles, Tablets, Ipads (portrait)
+    ##Screen = B/w 0px to 575px
+*/
+@media only screen and (max-width: 575px) {
+    /* Contact Section Css */
+    #contact-section-wrapper {
+        margin: 20px 0;
+    }
+}
+
+
+/* 
+    ##Device = Mobiles (portrait)
+    ##Screen = B/w 0px to 416px
+*/
+@media only screen and (max-width: 416px) {
+    /* Contact Section Css */
+    #contact-section-wrapper {
+        padding: 0px 12px;
+    }
+}
+
+
+/* 
+    ##Device = Mobiles (portrait)
+    ##Screen = B/w 0px to 382px
+*/
+@media only screen and (max-width: 382px) {
+    /* Contact Section Css */
+    #contact-section-wrapper .contact-text .text-box-inline h2 {
+        font-size: 30px;
+    }
+
+    #contact-section-wrapper #contact-form {
+        padding: 15px;
+    }
+}
+
+/* 
+    ##Device = Mobiles (portrait)
+    ##Screen = B/w 0px to 299px
+*/
+@media only screen and (max-width: 299px) {
+    /* Contact Section Css */
+    #contact-section-wrapper {
+        padding: 0px;
+    }
+}
