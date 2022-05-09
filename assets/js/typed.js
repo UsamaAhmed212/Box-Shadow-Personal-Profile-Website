@@ -18,7 +18,7 @@ function Typed() {
     function typed(element, attributes) {
         const {
                 startPoint = 'end',
-                startDelay = 2000,
+                startDelay = 2500,
                 typeSpeed  = 0,
                 backDelay  = 1500,
                 backSpeed  = 0,

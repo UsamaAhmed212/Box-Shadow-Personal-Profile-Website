@@ -2,16 +2,18 @@
 window.onload = function() {
     // Preloader Js
     var loader = document.querySelector(".loader");
-    if (loader.classList !== "loader-hidden") {
-        loader.classList.add('loader-hidden');
-        enableScroll();
-        loader.addEventListener('transitionend', function(e) {
-            loader.classList.add('loader-disable');
-        }, {
-        capture: false,
-        once: true,
-        passive: false
-        });
+    if(loader != null) {
+        if (loader.classList !== "loader-hidden") {
+            loader.classList.add('loader-hidden');
+            enableScroll();
+            loader.addEventListener('transitionend', function(e) {
+                loader.classList.add('loader-disable');
+            }, {
+            capture: false,
+            once: true,
+            passive: false
+            });
+        }
     }
     
     // Debounce Handler
@@ -38,47 +40,63 @@ window.onload = function() {
     };
 
     //insertAdjacentHTML Before all Images has data-src Attribute 
-    const innert_element = document.querySelector('.stage').outerHTML;
+    let innert_element = document.querySelector('.stage');
+    if(innert_element != null) {
+        innert_element = innert_element.outerHTML;
+    }
     const images = document.querySelectorAll("img[data-src]");
-    images.forEach(function (element) {
-        element.insertAdjacentHTML('beforebegin', innert_element);
-        element.previousElementSibling.removeAttribute("style");
-    });
+
+    if(images != null) {
+        images.forEach(function (element) {
+            if(innert_element != null) {
+                element.insertAdjacentHTML('beforebegin', innert_element);
+                element.previousElementSibling.removeAttribute("style");
+            }
+        });
+    }
 
     // Print Current Year in a Website
     const copyright = document.querySelector("#copyright");
-    copyright.appendChild(document.createTextNode(new Date().getFullYear()));
+    if(copyright != null) {
+        copyright.appendChild(document.createTextNode(new Date().getFullYear()));
+    }
+
 
     // .sidebar-menu Toggle  
     const menu_toggle = document.querySelector("#menu-toggle");
     const sidebar_menu = document.querySelector(".sidebar-menu");
 
-    menu_toggle.addEventListener('click', debounce(function(e) {
-        this.classList.toggle("open");
-        sidebar_menu.classList.toggle("active");
-    }));
+    if(menu_toggle != null) {
+        menu_toggle.addEventListener('click', debounce(function(e) {
+            this.classList.toggle("open");
+            if(sidebar_menu != null) {
+                sidebar_menu.classList.toggle("active");
+            }
+        }));
+    }
 
     // .sidebar-menu Close  
     const sidebar_menu_close = document.querySelector(".sidebar-menu-close");
 
-    sidebar_menu_close.addEventListener('click', debounce(function(e) {
-        const sidebar_menu_active = document.querySelector(".sidebar-menu.active");
-        
-        menu_toggle.classList.remove("open");
-        sidebar_menu_active.classList.remove("active");
-    }));
+    if(sidebar_menu_close != null) {
+        sidebar_menu_close.addEventListener('click', debounce(function(e) {
+            const sidebar_menu_active = document.querySelector(".sidebar-menu.active");
+            
+            menu_toggle.classList.remove("open");
+            sidebar_menu_active.classList.remove("active");
+        }));
+    }
 
     // Close or Hide .sidebar-menu when Click Outside 
-    window.addEventListener('click', debounce(function(e) {
+    window.addEventListener('click', function(e) {
         if ( menu_toggle.classList.contains("open") && sidebar_menu.classList.contains("active") ) {
-
             if ( sidebar_menu !== e.target && !sidebar_menu.contains(e.target) ) {
                 menu_toggle.classList.remove('open');
                 const sidebar_menu_active = document.querySelector(".sidebar-menu.active");
                 sidebar_menu_active.classList.remove("active");
             }
         }
-    }));
+    });
 
     // beforebegin Method add new Element the HTML into the container before the element |& and &| Preview Element Class Add 
     var inner_value = `<span class="sub-toggle">
@@ -88,51 +106,56 @@ window.onload = function() {
     </span>`;
 
     const sub_menu = document.querySelectorAll('.sub-menu');
-    sub_menu.forEach( function (element) {
-        element.previousElementSibling.classList.add("dropdown-toggle");
-        element.insertAdjacentHTML('beforebegin', inner_value);
-    });
+    if(sub_menu != null) {
+        sub_menu.forEach( function (element) {
+            element.previousElementSibling.classList.add("dropdown-toggle");
+            element.insertAdjacentHTML('beforebegin', inner_value);
+        });
+    }
 
 
     // .sidebar-menu > .sub-toggle Class Toggle |& and &| .sidebar-menu > .sub-menu
     const sub_toggle_all = document.querySelectorAll(".sub-toggle");
-    sub_toggle_all.forEach( function (element) {
-        element.addEventListener('click', debounce(function(e) {
-            this.classList.toggle("open");
 
-            var next_sub_menu = element.nextElementSibling;
+    if(sub_toggle_all != null) {
+        sub_toggle_all.forEach( function (element) {
+            element.addEventListener('click', debounce(function(e) {
+                this.classList.toggle("open");
 
-            if (next_sub_menu.offsetHeight == "0px" || next_sub_menu.offsetHeight == "") {
-                let id = null;
-                clearInterval(id);
-                let height = 0;
+                var next_sub_menu = element.nextElementSibling;
 
-                id = setInterval(function () {
-                    if (height >= next_sub_menu.scrollHeight) {
-                        next_sub_menu.style.height = "auto";
-                        clearInterval(id);
-                    }else {
-                        height += 5;
-                        next_sub_menu.style.height = height + "px";
-                    }
-                }, 5);
-            }else {
-                let id = null;
-                clearInterval(id);
-                let height = next_sub_menu.scrollHeight;
+                if (next_sub_menu.offsetHeight == "0px" || next_sub_menu.offsetHeight == "") {
+                    let id = null;
+                    clearInterval(id);
+                    let height = 0;
 
-                id = setInterval(function () {
-                    if (height <= 0) {
-                        next_sub_menu.style.height = "0px";
-                        clearInterval(id);
-                    }else {
-                        height -= 5;
-                        next_sub_menu.style.height = height + "px";
-                    }
-                }, 5);
-            }
-        }));
-    });
+                    id = setInterval(function () {
+                        if (height >= next_sub_menu.scrollHeight) {
+                            next_sub_menu.style.height = "auto";
+                            clearInterval(id);
+                        }else {
+                            height += 5;
+                            next_sub_menu.style.height = height + "px";
+                        }
+                    }, 5);
+                }else {
+                    let id = null;
+                    clearInterval(id);
+                    let height = next_sub_menu.scrollHeight;
+
+                    id = setInterval(function () {
+                        if (height <= 0) {
+                            next_sub_menu.style.height = "0px";
+                            clearInterval(id);
+                        }else {
+                            height -= 5;
+                            next_sub_menu.style.height = height + "px";
+                        }
+                    }, 5);
+                }
+            }));
+        });
+    }
     
     // Typed.js
     Typed();
@@ -149,7 +172,7 @@ window.onload = function() {
                 if (rect.top < window.innerHeight) {
                     const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
                     const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
-                    const {top,bottom,left,right} = element.getBoundingClientRect();
+                    const { top, bottom, left, right } = element.getBoundingClientRect();
                     const isInViewport = top + element.clientHeight >= 0 &&
                                         left + element.clientWidth >= 0 && 
                                         bottom <= viewportHeight + element.clientHeight && 
@@ -158,7 +181,7 @@ window.onload = function() {
                     if(isInViewport) {
                         element.setAttribute("src", element.getAttribute("data-src"));
                         element.removeAttribute("data-src");
-                        element.addEventListener('load', function() {
+                        element.addEventListener('load', function () {
                             element.previousElementSibling.remove();
                             element.removeAttribute("style");
                         });
@@ -176,11 +199,10 @@ window.onload = function() {
     window.addEventListener("wheel", loadImage);
 
     // #contact-form > .send-btn  Click Effect
-    const button = document.querySelector('#contact-section .send-btn');
-    const contactForm   = document.getElementById("contact-form");
+    const button = document.querySelector('#contact-form .send-btn');
+    const contactForm = document.getElementById("contact-form");
 
     function toggleClass(e) {
-        e.preventDefault();
         if(!this.classList.contains("finished")) {
             this.classList.toggle('active');
             button.disabled = true;
@@ -191,17 +213,21 @@ window.onload = function() {
         if(!this.classList.contains("finished")) {
             this.classList.add('finished');
 
-            setTimeout(function(){
+            setTimeout(function() {
                 button.disabled = false;
-                contactForm.reset();
+                if(contactForm != null) {
+                    contactForm.reset();
+                }
                 button.classList.remove("finished");
             }, 1000);
         }
     }
 
-    button.addEventListener('click', toggleClass);
-    button.addEventListener('transitionend', toggleClass);
-    button.addEventListener('transitionend', addClass);
+    if(button != null) {
+        button.addEventListener('click', toggleClass);
+        button.addEventListener('transitionend', toggleClass);
+        button.addEventListener('transitionend', addClass);
+    }
     
 }
 
