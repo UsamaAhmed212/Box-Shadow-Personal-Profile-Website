@@ -1,3 +1,4 @@
+/* Header Area Css */
 #menu-toggle {
     display: none;
 }
@@ -5,6 +6,22 @@
 .sidebar-menu-close {
     display: none;
 }
+
+
+/* 
+    ##Device = Mobiles, Tablets, Ipads (portrait)
+    ##Screen = B/w 0px to 1199px
+*/
+@media only screen and (max-width: 1199px) {
+    /* #about-box-shadow-wrapper > .about-box-shadow-section Css */
+    #about-box-shadow-wrapper .about-box-shadow-section,
+    #box-shadow-wrapper .box-shadow-section,
+    #header .header-section .navbar {
+        margin: 0px;
+    }
+
+}
+
 
 /* 
     ##Device = Mobiles, Tablets, Ipads (portrait)
@@ -24,7 +41,7 @@
         display: block;
         background: #ccc;
         border-radius: 2px;
-        transition: 0.25s ease-in-out;
+        -o-transition: 0.25s ease-in-out;
         box-sizing: border-box;
     }
 
@@ -130,7 +147,8 @@
     /* Responsive #navbarNav  */
     /* #header > #navbarNav Css */
     #header .sidebar-menu .navbar-nav {
-        -ms-flex-direction: column;
+        -moz-flex-direction: column;
+        -o-flex-direction: column;
         flex-direction: column;
     }
 
@@ -159,14 +177,10 @@
     }
 
     #header .sidebar-menu .sidebar-menu-close>span:before {
-        -webkit-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
         transform: rotate(45deg);
     }
 
     #header .sidebar-menu .sidebar-menu-close>span:after {
-        -webkit-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
         transform: rotate(-45deg);
     }
     
@@ -194,6 +208,8 @@
         top: 0;
         left: -272px;
         padding-top: 50px;
+        -ms-box-shadow: 0px 5px 17px rgb(0 0 0 / 17%), 0px 0.893452px 3.79717px rgb(0 0 0 / 10%), 0px 0.266004px 1.13052px rgb(0 0 0 / 7%);
+        -o-box-shadow: 0px 5px 17px rgb(0 0 0 / 17%), 0px 0.893452px 3.79717px rgb(0 0 0 / 10%), 0px 0.266004px 1.13052px rgb(0 0 0 / 7%);
         box-shadow: 0px 5px 17px rgb(0 0 0 / 17%), 0px 0.893452px 3.79717px rgb(0 0 0 / 10%), 0px 0.266004px 1.13052px rgb(0 0 0 / 7%);
         overflow-y: auto;
         transition: all .3s ease;
@@ -240,8 +256,7 @@
         overflow-y: hidden;
         transition: .0s;
     }
-
-    
+ 
     /* #header > .sidebar-menu > .sub-toggle Css */
     #header .sidebar-menu .sub-toggle {
         display: inline-flex;
@@ -263,4 +278,282 @@
         transform: rotate(-90deg);
     }
 
+}
+
+
+/* 
+    ##Device = Mobiles, Tablets, Ipads (portrait)
+    ##Screen = B/w 0px to 991px
+*/
+@media only screen and (max-width: 991px) {
+    /*  #about-section > .about-content Css */
+    #about-box-shadow-wrapper .about-box-shadow-section #about-section .about-content {
+        padding: 50px;
+        width: 75%;
+    }
+
+    /* #contact-section > #contact-form */
+    #box-shadow-wrapper .box-shadow-section #contact-section #contact-form {
+        padding: 0px;
+    }
+}
+
+
+/* 
+    ##Device = Mobiles, Tablets, Ipads (portrait)
+    ##Screen = B/w 0px to 768px
+*/
+@media only screen and (max-width: 768px) {
+    /* about-section > .about-content > .about-btn */
+    #about-box-shadow-wrapper .about-box-shadow-section #about-section .about-content .about-btn a {
+        margin-right: auto;
+    }
+
+    /* #about-section > .about-content Css */
+    #about-box-shadow-wrapper .about-box-shadow-section #about-section .about-content {
+        padding: 40px;
+        width: 100%;
+    }
+
+    /* #Portfolio-section > .portfolio-content Css */
+    #box-shadow-wrapper .box-shadow-section #Portfolio-section .portfolio-content {
+        margin: 12px 8px;
+    }
+
+    #box-shadow-wrapper .box-shadow-section #skill-section .skill-item {
+        margin-bottom: 35px;
+    }
+
+    #box-shadow-wrapper .box-shadow-section #Portfolio-section .section-title p {
+        max-width: 90%;
+    }
+
+    /* #service-section Css */
+    #box-shadow-wrapper .box-shadow-section #service-section {
+        margin-bottom: 70px;
+    }
+}
+
+
+
+/* 
+    ##Device = Mobiles, Tablets, Ipads (portrait)
+    ##Screen = B/w 0px to 575px
+*/
+@media only screen and (max-width: 575px) {
+    /* About Box Shadow Section and Box Shadow Section Css */
+    #about-box-shadow-wrapper,#box-shadow-wrapper {
+        padding: 0 20px;
+    }
+}
+
+/* 
+    ##Device = Mobiles (portrait)
+    ##Screen = B/w 0px to 499px
+*/
+@media only screen and (max-width: 499px) {
+    /* #about-section > .about-logo Css */
+    #about-box-shadow-wrapper .about-box-shadow-section #about-section .about-logo h1 {
+        font-size: 40px;
+    }
+
+    #about-box-shadow-wrapper .about-box-shadow-section #about-section .about-content .about-heading h1 {
+        font-size: 65px;
+    }
+
+    #about-box-shadow-wrapper .about-box-shadow-section #about-section .about-content {
+        padding: 25px;
+    }
+
+    /* #Portfolio-section > .portfolio-content Css */
+    #box-shadow-wrapper .box-shadow-section #Portfolio-section .section-title p {
+        max-width: 100%;
+    }
+}
+
+/* 
+    ##Device = Mobiles (portrait)
+    ##Screen = B/w 0px to 414px
+*/
+@media only screen and (max-width: 416px) {
+    /* #about-section Css */
+    #about-box-shadow-wrapper .about-box-shadow-section #about-section .about-logo h1 {
+        font-size: 30px;
+        padding: 0px 10px;
+    }
+
+    #about-box-shadow-wrapper .about-box-shadow-section #about-section .about-content {
+        padding: 10px;
+        margin-top: 30px;
+    }
+
+    #about-box-shadow-wrapper .about-box-shadow-section #about-section .about-content .about-heading {
+        min-height: 130px;
+    }
+
+    #about-box-shadow-wrapper .about-box-shadow-section #about-section .about-content .about-heading h1 {
+        font-size: 45px;
+    }
+    
+
+    /* #about-section > .about-content > .about-description */
+    #about-box-shadow-wrapper .about-box-shadow-section #about-section .about-content .about-description {
+        padding: 10px 0;
+    }
+
+    #about-box-shadow-wrapper .about-box-shadow-section #about-section .about-content .about-description p {
+        line-height: 1.6;
+    }
+    
+    /* #about-section and #service-section Css */
+    #about-box-shadow-wrapper .about-box-shadow-section #about-section .about-content .about-description,
+    #box-shadow-wrapper .box-shadow-section #service-section .service-box p {
+        text-align: center;
+    }
+
+    /* Service Section Css */
+    #box-shadow-wrapper .box-shadow-section #service-section .service-box {
+        padding: 25px 10px;
+    }
+
+    /* #Portfolio-section Css */
+    #box-shadow-wrapper .box-shadow-section #Portfolio-section .portfolio-content img {
+        min-height: auto;
+        -o-object-fit: scale-down;
+           object-fit: scale-down;
+    }
+
+    #box-shadow-wrapper .box-shadow-section #Portfolio-section .portfolio-loader .more-portfolio {
+        margin-right: 1px;
+    }
+
+    #box-shadow-wrapper .box-shadow-section #Portfolio-section .portfolio-loader .all-portfolio {
+        margin-left: 1px;
+    }
+
+    #box-shadow-wrapper .box-shadow-section #Portfolio-section .portfolio-loader > div {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    #box-shadow-wrapper .box-shadow-section #Portfolio-section .portfolio-loader a {
+        min-width: 120px;
+        padding: 12px 10px;
+        letter-spacing: 0px;
+    }
+
+    /* #contact-section > #contact-form Css */
+    #box-shadow-wrapper .box-shadow-section #contact-section #contact-form .form-control.message {
+        min-height: 85px;
+    }
+}
+
+/* 
+    ##Device = Mobiles (portrait)
+    ##Screen = B/w 0px to 299px
+*/
+@media only screen and (max-width: 299px) {
+    /* Header Area Css */
+    #header .header-section .navbar > div {
+        padding: 0 10px;
+    }
+
+    /* About Box Shadow Section and Box Shadow Section Css */
+    #about-box-shadow-wrapper,#box-shadow-wrapper {
+        padding: 0;
+    }
+    
+    /* About Box Shadow Section Css */
+    #about-box-shadow-wrapper {
+        margin-top: 100px;
+    }
+
+    /* #about-section Css */
+    #about-box-shadow-wrapper .about-box-shadow-section #about-section .about-content .about-heading {
+        min-height: 110px;
+    }
+
+    #about-box-shadow-wrapper .about-box-shadow-section #about-section .about-logo {
+        margin-top: -70px;
+    }
+
+    #about-box-shadow-wrapper .about-box-shadow-section #about-section .about-logo h1 {
+        font-size: 25px;
+    }
+
+    #about-box-shadow-wrapper .about-box-shadow-section #about-section .about-content .about-heading h1 {
+        font-size: 40px;
+    }
+
+    /* #contact-section > #contact-form Css */
+    #box-shadow-wrapper .box-shadow-section #contact-section #contact-form .form-control.message {
+        min-height: 80px;
+    }
+
+    /* Footer Section Css */
+    #box-shadow-wrapper .box-shadow-section #footer-section p a {
+        display: block;
+        margin: 2px 0;
+    }
+}
+
+/* 
+    ##Device = Mobiles (portrait)
+    ##Screen = B/w 0px to 265px
+*/
+@media only screen and (max-width: 265px) {
+    /* #header > .sidebar-menu Css */
+    #header .sidebar-menu {
+        width: 100%;
+    }
+
+    /* #Portfolio-section Css */
+    #box-shadow-wrapper .box-shadow-section #Portfolio-section .portfolio-loader a {
+        min-width: 165px;
+        padding: 12px 31px;
+    }
+
+    #box-shadow-wrapper .box-shadow-section #Portfolio-section .portfolio-content {
+        margin: 10px 8px;
+    }
+
+    /* #contact-section > #contact-form Css */
+    #box-shadow-wrapper .box-shadow-section #contact-section #contact-form .form-control.message {
+        min-height: 75px;
+    }
+}
+
+/* 
+    ##Device = Mobiles (portrait)
+    ##Screen = B/w 0px to 239px
+*/
+@media only screen and (max-width: 239px) {
+    /* Header Area Css */
+    #header .header-section .navbar .navbar-brand {
+        margin-right: 5px;
+    }
+
+    /* #about-section Css */
+    #about-box-shadow-wrapper .about-box-shadow-section #about-section .about-logo h1 {
+        font-size: 22px;
+    }
+
+    #about-box-shadow-wrapper .about-box-shadow-section #about-section .about-content .about-heading h1 {
+        font-size: 34px;
+    }
+
+    /* Service Section Css */
+    #box-shadow-wrapper .box-shadow-section #service-section .service-box h4 {
+        font-size: 16px;
+    }
+
+    /* Contact Section Css */
+    #box-shadow-wrapper .box-shadow-section #contact-section #contact-form .send-btn {
+        width: auto;
+    }
+
+    #box-shadow-wrapper .box-shadow-section #service-section .service-box {
+        padding: 15px 5px;
+    }
+    
 }

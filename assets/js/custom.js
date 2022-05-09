@@ -91,7 +91,7 @@ window.addEventListener('load', function(event) {
                 clearInterval(id);
                 let height = 0;
 
-                id = setInterval(() => {
+                id = setInterval(function () {
                     if (height >= next_sub_menu.scrollHeight) {
                         next_sub_menu.style.height = "auto";
                         clearInterval(id);
@@ -105,7 +105,7 @@ window.addEventListener('load', function(event) {
                 clearInterval(id);
                 let height = next_sub_menu.scrollHeight;
 
-                id = setInterval(() => {
+                id = setInterval(function () {
                     if (height <= 0) {
                         next_sub_menu.style.height = "0px";
                         clearInterval(id);
@@ -170,8 +170,6 @@ window.addEventListener('load', function(event) {
     button.addEventListener('click', toggleClass);
     button.addEventListener('transitionend', toggleClass);
     button.addEventListener('transitionend', addClass);
-
-
 
 });
 
