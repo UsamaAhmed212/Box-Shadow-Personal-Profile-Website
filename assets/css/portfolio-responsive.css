@@ -1,0 +1,137 @@
+/* 
+    ##Device = Mobiles, Tablets, Ipads (portrait)
+    ##Screen = B/w 0px to 1199px
+*/
+@media only screen and (max-width: 1199px) {
+    /* Portfolio Section Css */
+    #portfolio-section .portfolio-content img {
+        min-height: 202px;
+        max-height: 202px;
+    }
+}
+
+
+/* 
+    ##Device = Mobiles, Tablets, Ipads (portrait)
+    ##Screen = B/w 0px to 1024px
+*/
+
+@media only screen and (max-width: 1024px) {
+    /* Portfolio Section Css */
+    #portfolio-section a {
+        padding: 10px;
+        margin: 7px;
+    }
+}
+
+
+/* 
+    ##Device = Mobiles, Tablets, Ipads (portrait)
+    ##Screen = B/w 0px to 991px
+*/
+@media only screen and (max-width: 991px) {
+    /* Portfolio Section Css */
+    #portfolio-section a {
+        padding: 12px;
+        margin: 12px 8px;
+    }
+}
+
+/* 
+    ##Device = Mobiles, Tablets, Ipads (portrait)
+    ##Screen = B/w 0px to 768px
+*/
+@media only screen and (max-width: 768px) {
+    /* Portfolio Section Css */
+    #portfolio-section .portfolio-content img {
+        min-height: 190px;
+        max-height: 190px;
+        object-fit: cover;
+    }
+}
+
+/* 
+    ##Device = Mobiles, Tablets, Ipads (portrait)
+    ##Screen = B/w 0px to 575px
+*/
+@media only screen and (max-width: 575px) {
+    /* Portfolio Section Css */
+    #portfolio-section {
+        margin: 20px 0;
+    }
+    
+    #portfolio-section a {
+        padding: 12px;
+        margin: 8px 0px;
+    }
+    
+    #portfolio-section .portfolio-content img {
+        min-height: 230px;
+        max-height: 230px;
+    }
+}
+
+
+/* 
+    ##Device = Mobiles (portrait)
+    ##Screen = B/w 0px to 416px
+*/
+@media only screen and (max-width: 416px) {
+    /* Portfolio Section Css */
+    #portfolio-section .portfolio-content img {
+        min-height: 190px;
+        max-height: 190px;
+    }
+}
+
+
+/* 
+    ##Device = Mobiles (portrait)
+    ##Screen = B/w 0px to 382px
+*/
+@media only screen and (max-width: 382px) {
+    /* Portfolio Section Css */
+    #portfolio-section a {
+        padding: 10px;
+    }
+
+    #portfolio-section .portfolio-content img {
+        min-height: 145px;
+        max-height: 145px;
+    }
+}
+
+
+/* 
+    ##Device = Mobiles (portrait)
+    ##Screen = B/w 0px to 299px
+*/
+@media only screen and (max-width: 299px) {
+    /* Header Area Css */
+    #header .header-section .navbar > div {
+        padding: 0 10px;
+    }    
+
+    /* Portfolio Section Css */
+    #portfolio-section a {
+        padding: 0px;
+        margin: 10px 0px;
+    }
+}
+
+
+/* 
+    ##Device = Mobiles (portrait)
+    ##Screen = B/w 0px to 265px
+*/
+@media only screen and (max-width: 265px) {
+    /* Breadcrumb Section Css */
+    #breadcrumb-section-wrapper .breadcrumb-section {
+        padding: 0px 8px;
+    }
+
+    /* Portfolio Section Css */
+    #portfolio-section > div {
+        padding: 0px 8px;
+    }
+}
