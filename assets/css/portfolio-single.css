@@ -1,0 +1,114 @@
+*{margin: 0;padding: 0;}
+
+body {
+    background: #2b2a30;
+}
+
+/* preview-header Area Css */
+#preview-header {
+    position: relative;
+    font-size: 12px;
+    height: 54px;
+    background-color: #1bd7a3;
+    background-color:  #23272b;
+    z-index: 100;
+    line-height: 54px;
+    margin-bottom: 1px;
+}
+
+#preview-header .preview-logo {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+#preview-header .preview-logo a img {
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+
+#preview-header .preview-actions {
+    display: inline-block;
+    padding: 0 20px;
+    float: right;
+}
+
+#preview-header .preview-actions a {
+    font-size: 14px;
+    padding: 5px 20px;
+    line-height: 1.5;
+    background: linear-gradient(to right, #9ff669 0%, #43e794 51%, #31de79 100%) 0% 0% / 200%;
+    transition: 0.5s;
+    color: white;
+    -webkit-box-shadow: 0 2px 0 #6f9a37;
+    box-shadow: 0 2px 0 #6f9a37;
+    display: inline-block;
+    margin: 0;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    font-family: "Nunito Sans", Arial, sans-serif;
+    cursor: pointer;
+}
+
+#preview-header .preview-actions a:hover {
+    background-position: right center;
+    transform: translateY(1px);
+}
+
+/* #screenshots-section > .screenshots-list */
+#screenshots-section {
+    padding: 25px 10px;
+}
+
+#screenshots-section .screenshots-list .screenshots-thumbnail {
+    display: inline-block;
+    margin: 0 10px 20px 0;
+    border: 1px solid #333333;
+    line-height: 0;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+#screenshots-section .screenshots-list .screenshots-thumbnail:hover {
+    border: 1px solid #666666;
+    outline-width: 0;
+}
+
+#screenshots-section .screenshots-list .screenshots-thumbnail a {
+    background-color: transparent;
+    text-decoration: none;
+    display: block;
+}
+
+#screenshots-section .screenshots-list .screenshots-thumbnail a img {
+    border-style: none;
+}
+
+/* #screenshots-section > .screenshots-description */
+#screenshots-section .screenshots-description {
+    font-family: 'Roboto', Arial, sans-serif;
+    max-width: 1024px;
+    margin-top: 20px;
+    color: white;
+}
+
+#screenshots-section .screenshots-description h1 {
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    font-size: 24px;
+}
+
+/* #screenshots-section > .screenshots-fullsize */
+#screenshots-section .screenshots-fullsize {
+    display: inline-block;
+    margin: 20px 0;
+    border: 1px solid #333333;
+    line-height: 0;
+}
+
+#screenshots-section .screenshots-fullsize img {
+    max-width: 100%
+}
