@@ -118,6 +118,14 @@
         transition-delay: 0.375s;
     }
 
+    /* Header Area Css */
+    #header .header-section .navbar #navbarNav ul li a {
+        color: #000000;
+        font-family: "Roboto Mono", monospace;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.6;
+    }
 
     /* Responsive #navbarNav  */
     /* #header > #navbarNav Css */
@@ -131,15 +139,37 @@
         height: 40px;
         border-radius: 50%;
         text-align: center;
-        font-size: 24px;
+        justify-content: center;
         display: block;
         position: absolute;
         top: 5px;
-        right: 5px;
-        z-index: 2000;
-        background-color: #F8F9FA;
-        color: #ccc;
+        right: 15px;
+        z-index: 1;
+        background-color: transparent;
+        color: #000000;
     }
+
+    #header .sidebar-menu .sidebar-menu-close>span:before,
+    #header .sidebar-menu .sidebar-menu-close>span:after {
+        position: absolute;
+        content: "";
+        width: 2px;
+        height: 30px;
+        background: #000;
+    }
+
+    #header .sidebar-menu .sidebar-menu-close>span:before {
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+    #header .sidebar-menu .sidebar-menu-close>span:after {
+        -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+    
 
     #header .sidebar-menu .navbar-nav .nav-item a::after {
         display: none;

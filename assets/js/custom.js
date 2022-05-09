@@ -1,5 +1,20 @@
 "use strict";
 window.addEventListener('load', function(event) {
+    // .nav-link to Add Class .active and Others .nav-link to Remove Class .active
+    const nav_link = document.querySelectorAll("#navbarNav .nav-link");
+    nav_link.forEach( function (element) {
+        element.addEventListener('click', function(e) {
+            e.stopPropagation();
+            e.preventDefault();
+            
+            nav_link.forEach(function (node) {
+                node.classList.remove('active');
+            });
+            this.classList.add('active');
+        });
+    });
+
+
     // Print Current Year in a Website
     const copyright = document.querySelector("#copyright");
     copyright.appendChild(document.createTextNode(new Date().getFullYear()));
