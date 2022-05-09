@@ -1,0 +1,236 @@
+#menu-toggle {
+    display: none;
+}
+
+.sidebar-menu-close {
+    display: none;
+}
+
+/* 
+    ##Device = Mobiles, Tablets, Ipads (portrait)
+    ##Screen = B/w 0px to 1024px
+*/
+
+/* #header > #menu-toggle Css */
+@media only screen and (max-width: 1024px) {
+/* Responsive Menu Toggle  */
+/* #header > #menu-toggle Effect Css */
+    #menu-toggle {
+        display: block;
+        margin-left: auto;
+    }
+
+    #menu-toggle span {
+        display: block;
+        background: #ccc;
+        border-radius: 2px;
+        transition: 0.25s ease-in-out;
+        box-sizing: border-box;
+    }
+
+    #menu-toggle {
+        width: 50px;
+        height: 50px;
+        position: relative;
+        cursor: pointer;
+        background: transparent;
+        border-radius: 5px;
+    }
+
+    #menu-toggle:hover {
+        background: transparent;
+    }
+
+    #menu-toggle #hamburger {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+    }
+
+    #menu-toggle #hamburger span {
+        width: 80%;
+        height: 3px;
+        position: relative;
+        top: 10%;
+        left: 10%;
+        margin: 8px 0;
+    }
+
+    #menu-toggle #hamburger span:nth-child(1) {
+        transition-delay: 0.5s;
+    }
+
+    #menu-toggle #hamburger span:nth-child(2) {
+        transition-delay: 0.625s;
+    }
+
+    #menu-toggle #hamburger span:nth-child(3) {
+        transition-delay: 0.75s;
+    }
+
+    #menu-toggle #cross {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        transform: rotate(45deg);
+    }
+
+    #menu-toggle #cross span:nth-child(1) {
+        height: 0%;
+        width: 3px;
+        position: absolute;
+        top: 10%;
+        left: 46%;
+        transition-delay: 0s;
+    }
+
+    #menu-toggle #cross span:nth-child(2) {
+        width: 0%;
+        height: 3px;
+        position: absolute;
+        left: 10%;
+        top: 48%;
+        transition-delay: 0.25s;
+    }
+
+    #menu-toggle.open #hamburger span {
+        width: 0%;
+    }
+
+    #menu-toggle.open #hamburger span:nth-child(1) {
+        transition-delay: 0s;
+    }
+
+    #menu-toggle.open #hamburger span:nth-child(2) {
+        transition-delay: 0.125s;
+    }
+
+    #menu-toggle.open #hamburger span:nth-child(3) {
+        transition-delay: 0.25s;
+    }
+    
+    #menu-toggle.open #cross span:nth-child(1) {
+        height: 80%;
+        transition-delay: 0.625s;
+    }
+    #menu-toggle.open #cross span:nth-child(2) {
+        width: 80%;
+        transition-delay: 0.375s;
+    }
+
+
+    /* Responsive #navbarNav  */
+    /* #header > #navbarNav Css */
+    #header .sidebar-menu .navbar-nav {
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    #header .sidebar-menu .sidebar-menu-close {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        text-align: center;
+        font-size: 24px;
+        display: block;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        z-index: 2000;
+        background-color: #F8F9FA;
+        color: #ccc;
+    }
+
+    #header .sidebar-menu .navbar-nav .nav-item a::after {
+        display: none;
+    }
+    #header .sidebar-menu .navbar-nav .nav-item .active {
+        border: none;
+    }
+    
+
+    /* #header > .sidebar-menu Css */
+    #header .sidebar-menu.active {
+        transform: translateX(272px);
+    }
+
+    #header .sidebar-menu {
+        display: block !important;
+        background-color: #fff;
+        position: fixed;
+        z-index: 10001;
+        width: 272px;
+        height: 100%;
+        top: 0;
+        left: -272px;
+        padding-top: 50px;
+        box-shadow: 0px 5px 17px rgb(0 0 0 / 17%), 0px 0.893452px 3.79717px rgb(0 0 0 / 10%), 0px 0.266004px 1.13052px rgb(0 0 0 / 7%);
+        overflow-y: auto;
+        transition: all .3s ease;
+    }
+    #header .sidebar-menu ul {
+        padding: 0;
+    }
+
+    #header .sidebar-menu .navbar-nav ul li {
+        padding: 0 20px;
+    }
+
+    #header  .sidebar-menu .navbar-nav ul li a {
+        display: block;
+        color: #95979d;
+        text-decoration: none;
+        margin: 0;
+        padding: 8px 0;
+    }
+    
+    #header .sidebar-menu .navbar-nav .nav-item > a:hover, #header .sidebar-menu .navbar-nav > .nav-item.active > a {
+        color: #95979d;
+        border-bottom: 1px solid rgba(255, 255, 255, .15);
+    }
+    
+    #header .sidebar-menu ul li a {
+        color: #95979d;
+    }
+    
+    /* #header > .sidebar-menu > .sub-menu Css */
+    #header .sidebar-menu .navbar-nav .nav-item .dropdown-menu.sub-menu {
+        width: unset;
+        height: 0;
+        display: block;
+        box-shadow: none;
+        margin: 0;
+        padding: 0 0 0 20px;
+        position: relative;
+        opacity: 1;
+        visibility: visible;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        overflow-y: hidden;
+        transition: .0s;
+    }
+
+    
+    /* #header > .sidebar-menu > .sub-toggle Css */
+    #header .sidebar-menu .sub-toggle {
+        display: inline-flex;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 14px 20px;
+    }
+    
+    #header .sidebar-menu .sub-toggle svg {
+        fill: #95979d;
+        transform: rotate(90deg);
+        cursor: pointer;
+        transition: .2s;
+    }
+    
+    #header .sidebar-menu .sub-toggle.open svg {
+        transform: rotate(-90deg);
+    }
+
+}
