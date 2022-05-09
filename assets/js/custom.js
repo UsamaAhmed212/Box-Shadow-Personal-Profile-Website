@@ -14,6 +14,18 @@ window.onload = function() {
         });
     }
 
+    //insertAdjacentHTML Before all Images has data-src Attribute 
+    const innet_element = document.querySelector('.stage').outerHTML;
+    const images = document.querySelectorAll("img[data-src]");
+    images.forEach(function (element) {
+        element.insertAdjacentHTML('beforebegin', innet_element);
+        element.previousElementSibling.removeAttribute("style");
+    });
+
+    // Print Current Year in a Website
+    const copyright = document.querySelector("#copyright");
+    copyright.appendChild(document.createTextNode(new Date().getFullYear()));
+
     // .nav-link to Add Class .active and Others .nav-link to Remove Class .active
     const nav_link = document.querySelectorAll("#navbarNav .nav-link");
     nav_link.forEach( function (element) {
@@ -27,11 +39,6 @@ window.onload = function() {
             this.classList.add('active');
         });
     });
-
-
-    // Print Current Year in a Website
-    const copyright = document.querySelector("#copyright");
-    copyright.appendChild(document.createTextNode(new Date().getFullYear()));
     
     // .sidebar-menu Toggle  
     const menu_toggle = document.querySelector("#menu-toggle");
@@ -147,6 +154,39 @@ window.onload = function() {
             backDelay: 3000,
     });
 
+    // Images Lazy loading
+     function loadImage(e) {
+        var elements = document.querySelectorAll("img[data-src]");
+        elements.forEach(function (element) {
+            if(element.hasAttribute("data-src") && element.getAttribute("data-src")) {
+                var rect = element.getBoundingClientRect();
+                if (rect.top < window.innerHeight) {
+                    const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+                    const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+                    const {top,bottom,left,right} = element.getBoundingClientRect();
+                    const isInViewport = top + element.clientHeight >= 0 &&
+                                        left + element.clientWidth >= 0 && 
+                                        bottom <= viewportHeight + element.clientHeight && 
+                                        right <= viewportWidth + element.clientWidth;
+
+                    if(isInViewport) {
+                        element.setAttribute("src", element.getAttribute("data-src"));
+                        element.removeAttribute("data-src");
+                        element.addEventListener('load', function(){
+                            element.previousElementSibling.remove();
+                        });
+                    }
+                }
+            }
+            
+        });
+    }
+
+    loadImage();
+    window.addEventListener('load', loadImage);
+    window.addEventListener('scroll', loadImage);
+    window.addEventListener('resize', loadImage);
+    window.addEventListener("wheel", loadImage);
 
     // #contact-form > .send-btn  Click Effect
     const button = document.querySelector('#contact-section .send-btn');
