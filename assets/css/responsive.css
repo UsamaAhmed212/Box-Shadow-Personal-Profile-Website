@@ -41,7 +41,9 @@
         display: block;
         background: #ccc;
         border-radius: 2px;
-        -o-transition: 0.25s ease-in-out;
+        -webkit-transition: 0.25s ease-in-out;
+        -moz-transition: 0.25s ease-in-out;
+        transition: 0.25s ease-in-out;
         box-sizing: border-box;
     }
 
@@ -147,8 +149,8 @@
     /* Responsive #navbarNav  */
     /* #header > #navbarNav Css */
     #header .sidebar-menu .navbar-nav {
+        -webkit-flex-direction: column;
         -moz-flex-direction: column;
-        -o-flex-direction: column;
         flex-direction: column;
     }
 
@@ -208,8 +210,8 @@
         top: 0;
         left: -272px;
         padding-top: 50px;
-        -ms-box-shadow: 0px 5px 17px rgb(0 0 0 / 17%), 0px 0.893452px 3.79717px rgb(0 0 0 / 10%), 0px 0.266004px 1.13052px rgb(0 0 0 / 7%);
-        -o-box-shadow: 0px 5px 17px rgb(0 0 0 / 17%), 0px 0.893452px 3.79717px rgb(0 0 0 / 10%), 0px 0.266004px 1.13052px rgb(0 0 0 / 7%);
+        -webkit-box-shadow: 0px 5px 17px rgb(0 0 0 / 17%), 0px 0.893452px 3.79717px rgb(0 0 0 / 10%), 0px 0.266004px 1.13052px rgb(0 0 0 / 7%);
+        -moz-box-shadow: 0px 5px 17px rgb(0 0 0 / 17%), 0px 0.893452px 3.79717px rgb(0 0 0 / 10%), 0px 0.266004px 1.13052px rgb(0 0 0 / 7%);
         box-shadow: 0px 5px 17px rgb(0 0 0 / 17%), 0px 0.893452px 3.79717px rgb(0 0 0 / 10%), 0px 0.266004px 1.13052px rgb(0 0 0 / 7%);
         overflow-y: auto;
         transition: all .3s ease;
@@ -419,7 +421,8 @@
     /* #Portfolio-section Css */
     #box-shadow-wrapper .box-shadow-section #Portfolio-section .portfolio-content img {
         min-height: auto;
-        -o-object-fit: scale-down;
+        -webkit-object-fit: scale-down;
+        -moz-object-fit: scale-down;
            object-fit: scale-down;
     }
 

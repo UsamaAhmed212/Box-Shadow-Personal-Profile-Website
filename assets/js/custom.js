@@ -1,5 +1,19 @@
 "use strict";
 window.onload = function() {
+    // Preloader Js
+    var loader = document.querySelector(".loader");
+    if (loader.classList !== "loader-hidden") {
+        loader.classList.add('loader-hidden');
+        enableScroll()
+        loader.addEventListener('transitionend', function(e) {
+            loader.classList.add('loader-disable');
+        }, {
+        capture: false,
+        once: true,
+        passive: false
+        });
+    }
+
     // .nav-link to Add Class .active and Others .nav-link to Remove Class .active
     const nav_link = document.querySelectorAll("#navbarNav .nav-link");
     nav_link.forEach( function (element) {
@@ -161,8 +175,9 @@ window.onload = function() {
     button.addEventListener('click', toggleClass);
     button.addEventListener('transitionend', toggleClass);
     button.addEventListener('transitionend', addClass);
-
+    
 }
+
 
 
 
