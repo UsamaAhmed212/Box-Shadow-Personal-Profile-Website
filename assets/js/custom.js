@@ -1,5 +1,5 @@
 "use strict";
-window.onload = function() {
+window.onload = function(event) {
     // Preloader Js
     var loader = document.querySelector(".loader");
     if(loader != null) {
@@ -37,7 +37,7 @@ window.onload = function() {
 
             if (callNow) fn.apply(context, args);
         };
-    };
+    }
 
     //insertAdjacentHTML Before all Images has data-src Attribute 
     let innert_element = document.querySelector('.stage');

@@ -1,0 +1,51 @@
+:root {
+    scroll-behavior: unset;
+}
+
+.scroll-to-top {
+    position: fixed;
+    right: 25px;
+    z-index: 100;
+    bottom: 25px;
+    height: 46px;
+    width: 46px;
+    color: #e38445;
+    border-radius: 50%;
+    cursor: pointer;
+    background: none;
+    padding: 0;
+    border: none;
+    box-shadow: 0 0 0 2px #e3844540 inset;
+    -webkit-box-shadow: 0 0 0 2px #e3844540 inset;
+    -webkit-transition: .7s;
+    transition: .7s;
+    transform: translate(0px, 10px);
+    opacity: 0;
+    visibility: hidden;
+}
+  
+.scroll-to-top.active {
+    transform: translate(0px, 0px);
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-to-top::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    height: 40%;
+    width: 25%;
+    background-color: #e38445;
+    -webkit-clip-path: polygon(0 30%, 50% 0, 100% 30%, 94% 39%, 58% 17%, 58% 100%, 42% 100%, 42% 17%, 6% 39%);
+    clip-path: polygon(0 30%, 50% 0, 100% 30%, 94% 39%, 58% 17%, 58% 100%, 42% 100%, 42% 17%, 6% 39%);
+}
+  
+.scroll-to-top svg path {
+    fill: none;
+    stroke: #e38445;
+    stroke-width: 5;
+}
