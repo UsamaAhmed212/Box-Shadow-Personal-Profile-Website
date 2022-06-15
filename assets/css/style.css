@@ -4,9 +4,8 @@ body{
 
 /* Header Area Css */
 #header {
-    margin-top: -950px;
+    /* margin-top: -950px; */
 }
-
 
 /* Background Image Area Css */
 #background-image {
@@ -21,7 +20,10 @@ body{
 
 /* About Box Shadow Section Css */
 #about-box-shadow-wrapper {
-    margin-top: 130px;
+    position: absolute;
+    top: 215px;
+    left: 0;
+    right: 0;
 }
 
 #about-box-shadow-wrapper .about-box-shadow-section {

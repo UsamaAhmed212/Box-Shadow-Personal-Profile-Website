@@ -1,5 +1,5 @@
 "use strict";
-window.onload = function(event) {
+window.addEventListener('load', function (event) {
     // Preloader Js
     var loader = document.querySelector(".loader");
     if(loader != null) {
@@ -156,9 +156,6 @@ window.onload = function(event) {
             }));
         });
     }
-    
-    // Typed.js
-    Typed();
 
     // Images Lazy loading
      function loadImage(e) {
@@ -229,7 +226,7 @@ window.onload = function(event) {
         button.addEventListener('transitionend', addClass);
     }
     
-}
+});
 
 
 

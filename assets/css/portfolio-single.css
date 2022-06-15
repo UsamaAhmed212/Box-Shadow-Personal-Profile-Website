@@ -6,7 +6,8 @@ body {
 
 /* preview-header Area Css */
 #preview-header {
-    position: relative;
+    position: fixed;
+    width: 100%;
     font-size: 12px;
     height: 54px;
     background-color: #1bd7a3;

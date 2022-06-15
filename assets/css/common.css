@@ -370,7 +370,7 @@ img[data-src] {
 
 /* Header Area Css */
 #header {
-    margin-top: -400px;
+    /* margin-top: -400px; */
 }
 
 #header .header-section .navbar {
@@ -550,7 +550,11 @@ img[data-src] {
 /* Breadcrumb Section Css */
 #breadcrumb-section-wrapper {
     padding: 90px 0;
-    position: relative;
+    /* position: relative; */
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
 }
 
 #breadcrumb-section-wrapper .breadcrumb-section .breadcrumb-heading h1 {
