@@ -61,100 +61,65 @@ window.addEventListener('load', function (event) {
         copyright.appendChild(document.createTextNode(new Date().getFullYear()));
     }
 
-
     // .sidebar-menu Toggle  
-    const menu_toggle = document.querySelector("#menu-toggle");
-    const sidebar_menu = document.querySelector(".sidebar-menu");
-
-    if(menu_toggle != null) {
-        menu_toggle.addEventListener('click', debounce(function(e) {
-            this.classList.toggle("open");
-            if(sidebar_menu != null) {
-                sidebar_menu.classList.toggle("active");
+    if ( $("#menu-toggle").length > 0 ) { 
+        $("#menu-toggle").click(debounce(function(e) {
+            $(this).toggleClass('open');
+            if( $(".sidebar-menu").length > 0 ) {
+                $(".sidebar-menu").toggleClass("active");
             }
         }));
     }
 
     // .sidebar-menu Close  
-    const sidebar_menu_close = document.querySelector(".sidebar-menu-close");
-
-    if(sidebar_menu_close != null) {
-        sidebar_menu_close.addEventListener('click', debounce(function(e) {
-            const sidebar_menu_active = document.querySelector(".sidebar-menu.active");
-            
-            menu_toggle.classList.remove("open");
-            sidebar_menu_active.classList.remove("active");
+    if ( $(".sidebar-menu-close").length > 0 ) { 
+        $(".sidebar-menu-close").click(debounce(function(e) {
+                $("#menu-toggle").removeClass('open');
+                $(".sidebar-menu.active").removeClass("active");
         }));
     }
 
     // Close or Hide .sidebar-menu when Click Outside 
-    window.addEventListener('click', function(e) {
-        if ( menu_toggle.classList.contains("open") && sidebar_menu.classList.contains("active") ) {
-            if ( sidebar_menu !== e.target && !sidebar_menu.contains(e.target) ) {
-                menu_toggle.classList.remove('open');
-                const sidebar_menu_active = document.querySelector(".sidebar-menu.active");
-                sidebar_menu_active.classList.remove("active");
-            }
+    $(document).on('click', debounce(function (e) {
+        var container = $(".sidebar-menu");
+        // If the target of the click isn't the container
+        if(!container.is(e.target) && container.has(e.target).length === 0){
+            $("#menu-toggle").removeClass('open');
+            $(".sidebar-menu.active").removeClass("active");
         }
-    });
+    }));
 
-    // beforebegin Method add new Element the HTML into the container before the element |& and &| Preview Element Class Add 
+    // beforebegin Method add new Element the HTML into the container before the element
     var inner_value = `<span class="sub-toggle">
-        <svg width="14" height="14" viewBox="0 0 8 16">
-            <path d="M0.772126 1.19065L0.153407 1.80934C0.00696973 1.95578 0.00696973 2.19322 0.153407 2.33969L5.80025 8L0.153407 13.6603C0.00696973 13.8067 0.00696973 14.0442 0.153407 14.1907L0.772126 14.8094C0.918563 14.9558 1.156 14.9558 1.30247 14.8094L7.84666 8.26519C7.99309 8.11875 7.99309 7.88131 7.84666 7.73484L1.30247 1.19065C1.156 1.04419 0.918563 1.04419 0.772126 1.19065Z"></path>
-        </svg>
-    </span>`;
+                    <svg width="14" height="14" viewBox="0 0 8 16">
+                        <path d="M0.772126 1.19065L0.153407 1.80934C0.00696973 1.95578 0.00696973 2.19322 0.153407 2.33969L5.80025 8L0.153407 13.6603C0.00696973 13.8067 0.00696973 14.0442 0.153407 14.1907L0.772126 14.8094C0.918563 14.9558 1.156 14.9558 1.30247 14.8094L7.84666 8.26519C7.99309 8.11875 7.99309 7.88131 7.84666 7.73484L1.30247 1.19065C1.156 1.04419 0.918563 1.04419 0.772126 1.19065Z"></path>
+                    </svg>
+                </span>`;
 
-    const sub_menu = document.querySelectorAll('.sub-menu');
-    if(sub_menu != null) {
-        sub_menu.forEach( function (element) {
-            element.previousElementSibling.classList.add("dropdown-toggle");
-            element.insertAdjacentHTML('beforebegin', inner_value);
+    if ( $(".sub-menu").length > 0 ) { 
+        $(".sub-menu").each( function( index, value ) {
+            value.insertAdjacentHTML('beforebegin', inner_value);
         });
     }
 
+    // .sidebar-menu > .sub-menu > .sub-toggle |&and&|.sidebar-menu > .sub-menu.active Toggle 
+    if ( $(".sub-toggle").length > 0 ) {
+        $(".sub-toggle").click(debounce(function(e) {
+            $(this).toggleClass('open');
 
-    // .sidebar-menu > .sub-toggle Class Toggle |& and &| .sidebar-menu > .sub-menu
-    const sub_toggle_all = document.querySelectorAll(".sub-toggle");
-
-    if(sub_toggle_all != null) {
-        sub_toggle_all.forEach( function (element) {
-            element.addEventListener('click', debounce(function(e) {
-                this.classList.toggle("open");
-
-                var next_sub_menu = element.nextElementSibling;
-
-                if (next_sub_menu.offsetHeight == "0px" || next_sub_menu.offsetHeight == "") {
-                    let id = null;
-                    clearInterval(id);
-                    let height = 0;
-
-                    id = setInterval(function () {
-                        if (height >= next_sub_menu.scrollHeight) {
-                            next_sub_menu.style.height = "auto";
-                            clearInterval(id);
-                        }else {
-                            height += 5;
-                            next_sub_menu.style.height = height + "px";
-                        }
-                    }, 5);
-                }else {
-                    let id = null;
-                    clearInterval(id);
-                    let height = next_sub_menu.scrollHeight;
-
-                    id = setInterval(function () {
-                        if (height <= 0) {
-                            next_sub_menu.style.height = "0px";
-                            clearInterval(id);
-                        }else {
-                            height -= 5;
-                            next_sub_menu.style.height = height + "px";
-                        }
-                    }, 5);
-                }
-            }));
-        });
+            var sub_menu = $(this).next();
+            if (sub_menu.height() == "0px" || sub_menu.height() == "") {
+                sub_menu.animate({
+                    height: sub_menu.get(0).scrollHeight
+            }, 500, function(){
+                    $(this).height('auto');
+            });
+            } else {
+                sub_menu.animate({
+                height: "0"
+            }, 500);
+            }
+        }));
     }
 
     // Images Lazy loading
@@ -227,11 +192,3 @@ window.addEventListener('load', function (event) {
     }
     
 });
-
-
-
-
-
-
-
-    
