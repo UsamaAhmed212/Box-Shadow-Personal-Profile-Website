@@ -78,13 +78,20 @@
     margin-bottom: 20px;
 }
 
-#contact-section-wrapper .contact-text .contact-info > li i {
+#contact-section-wrapper .contact-text .contact-info > li span {
     width: 24px;
-    font-size: 24px;
-    vertical-align: middle;
-    border-style: none;
-    color: #ffffff9c;
+    height: 24px;
+    font-size: 15px;
     margin-right: 18px;
+}
+
+#contact-section-wrapper .contact-text .contact-info > li span svg {
+    width: 100%;
+    height: 100%;
+}
+
+#contact-section-wrapper .contact-text .contact-info > li span svg path {
+    fill: #ffffff9c;
 }
 
 #contact-section-wrapper .contact-text .contact-info > li div {
@@ -136,6 +143,7 @@
     width: 45px;
     height: 45px;
     position: relative;
+    font-size: 0px;
     display: flex;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -149,21 +157,26 @@
     background-color: #303030;
 }
 
-#contact-section-wrapper .contact-text .social li a i {
-    font-size: 19px;
+#contact-section-wrapper .contact-text .social li a span {
+    width: 19px;
+    height: 19px;
+}
+
+#contact-section-wrapper .contact-text .social li a span svg {
+    width: 100%;
+    height: 100%;
+}
+
+#contact-section-wrapper .contact-text .social li a span svg path {
+    fill: #ffffff9c;
+}
+
+#contact-section-wrapper .contact-text .social li a span svg:hover path {
+    fill: #ada1a19c;
     -webkit-transition: all .4s ease 0s;
     -moz-transition: all .4s ease 0s;
     transition: all .4s ease 0s;
 }
-
-#contact-section-wrapper .contact-text .social li a:hover i {
-    background: -webkit-linear-gradient(90deg,#1345e6 0%,#ed239f 100%);
-    background: -moz-linear-gradient(90deg,#1345e6 0%,#ed239f 100%);
-    background: linear-gradient(90deg,#1345e6 0%,#ed239f 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
 
 /* Contact Section > #contact-form Css */
 button, input, optgroup, select, textarea {
@@ -277,7 +290,7 @@ input:invalid, input:required, textarea:invalid, textarea:required {
     resize: vertical;
 }
 
-#contact-section-wrapper #contact-form .group .control > i {
+#contact-section-wrapper #contact-form .group .control > span {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -293,13 +306,23 @@ input:invalid, input:required, textarea:invalid, textarea:required {
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     width: 40px;
+    height: 18px;
     font-size: 18px;
     color: #ffffff9c;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
 
-#contact-section-wrapper #contact-form .group .control textarea + i {
+#contact-section-wrapper #contact-form .group .control > span svg {
+    width: 100%;
+    height: 100%;
+}
+
+#contact-section-wrapper #contact-form .group .control > span svg path {
+    fill: #ffffff9c;
+}
+
+#contact-section-wrapper #contact-form .group .control textarea + span {
     top: 11px;
     -webkit-transform: translateY(0);
     transform: translateY(0);
@@ -369,7 +392,7 @@ input:invalid, input:required, textarea:invalid, textarea:required {
     line-height: 0;
 }
 
-#contact-section-wrapper #contact-form .group .control .send-btn span i {
+#contact-section-wrapper #contact-form .group .control .send-btn span svg {
     -webkit-transform-origin: center center;
     -moz-transform-origin: center center;
     transform-origin: center center;
@@ -383,6 +406,8 @@ input:invalid, input:required, textarea:invalid, textarea:required {
 }
 
 #contact-section-wrapper #contact-form .group .control .send-btn span:nth-of-type(2) {
+    width: 25px;
+    height: 24px;
     top: 100%;
     font-size: 24px;
     -webkit-transform: translateY(0%);
@@ -412,12 +437,13 @@ input:invalid, input:required, textarea:invalid, textarea:required {
 
 #contact-section-wrapper #contact-form .group .control .send-btn.active span:nth-of-type(2) {
     top: 50%;
+    fill: #FFFFFF;
     -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
     transform: translateY(-50%);
 }
 
-#contact-section-wrapper #contact-form .group .control .send-btn.active span:nth-of-type(2) i {
+#contact-section-wrapper #contact-form .group .control .send-btn.active span:nth-of-type(2) svg {
     -webkit-animation: loading 500ms linear infinite;
     -moz-animation: loading 500ms linear infinite;
     animation: loading 500ms linear infinite;
@@ -450,10 +476,16 @@ input:invalid, input:required, textarea:invalid, textarea:required {
     animation: scale 0.5s linear;
 }
 
-#contact-section-wrapper #contact-form .group .control .send-btn.finished .check i {
+#contact-section-wrapper #contact-form .group .control .send-btn.finished .check svg {
+    width: 22px;
+    height: 24px;
     -webkit-transform-origin: center center;
     -moz-transform-origin: center center;
     transform-origin: center center;
+}
+
+#contact-section-wrapper #contact-form .group .control .send-btn.finished .check svg path {
+    fill: #FFFFFF;
 }
 
 @keyframes loading {
