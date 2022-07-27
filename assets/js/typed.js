@@ -1,5 +1,5 @@
 "use strict";
-$( document ).ready( function() {
+jQuery( document ).ready( function($) {
     function Typed() {
         $('.typed').each(function() {
             const element = $(this);
