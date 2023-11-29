@@ -111,12 +111,14 @@
         </section>
     </header>
     
-    <!-- About Box Shadow Section -->
-    <section id="about-box-shadow-wrapper">
+    
+    
+    <!-- Box Shadow Section -->
+    <section id="box-shadow-wrapper">
         <div class="container-md p-0">
             <div class="row m-0">
                 <div class="col-12 p-0">
-                    <div class="about-box-shadow-section">
+                    <div class="box-shadow-section">
                         <!-- About Section -->
                         <section id="about-section">
                             <div class="container-md p-0">
@@ -131,7 +133,7 @@
                                             <div class="about-heading-title">
                                                 <h1 class="typed" data-aos="fade-up">
                                                     <span>i am</span>
-                                                    <span class="typed-texts" Typed-show-cursor ="false">
+                                                    <span class="typed-texts" Typed-type-speed="750" Typed-back-speed="750" Typed-show-cursor ="false">
                                                         <span>designer</span>
                                                         <span>developer</span>
                                                     </span>
@@ -151,11 +153,11 @@
                                             </div>
 
                                             <div class="about-heading-title_social_icons my-4">
-                                                <a href="#" data-aos="zoom-in-up" data-aos-delay="100"><img src="images/svg/twitter.svg" alt="SVG" class="svg"/></a>
-                                                <a href="#" data-aos="zoom-in-up" data-aos-delay="200"><img src="images/svg/facebook-f.svg" alt="SVG" class="svg"/></a>
-                                                <a href="#" data-aos="zoom-in-up" data-aos-delay="300"><img src="images/svg/instagram.svg" alt="SVG" class="svg"/></a>
-                                                <a href="#" data-aos="zoom-in-up" data-aos-delay="400"><img src="images/svg/linkedin-in.svg" alt="SVG" class="svg"/></a>
-                                                <a href="#" data-aos="zoom-in-up" data-aos-delay="500"><img src="images/svg/dribbble.svg" alt="SVG" class="svg"/></a>                                  
+                                                <a href="#" data-aos="zoom-in-up" data-aos-delay="100"><img src="./images/svg/twitter.svg" alt="SVG" class="svg"/></a>
+                                                <a href="#" data-aos="zoom-in-up" data-aos-delay="200"><img src="./images/svg/facebook-f.svg" alt="SVG" class="svg"/></a>
+                                                <a href="#" data-aos="zoom-in-up" data-aos-delay="300"><img src="./images/svg/instagram.svg" alt="SVG" class="svg"/></a>
+                                                <a href="#" data-aos="zoom-in-up" data-aos-delay="400"><img src="./images/svg/linkedin-in.svg" alt="SVG" class="svg"/></a>
+                                                <a href="#" data-aos="zoom-in-up" data-aos-delay="500"><img src="./images/svg/dribbble.svg" alt="SVG" class="svg"/></a>                                  
                                             </div>
                                             
                                             <div class="about-btn" data-aos="zoom-in">
@@ -166,18 +168,7 @@
                                 </div>
                             </div>
                         </section>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Box Shadow Section -->
-    <section id="box-shadow-wrapper">
-        <div class="container-md p-0">
-            <div class="row m-0">
-                <div class="col-12 p-0">
-                    <div class="box-shadow-section">
+                        
                         <!-- Skills Section -->
                         <section id="skills-section">
                             <div class="container-md p-0">
@@ -246,8 +237,11 @@
                                 </div>
                             </div>
                         </section>
-                        <hr/>
-                    
+
+                        <div class="divider">
+                            <span class="divider-separator"></span>
+                        </div>
+                        
                         <!-- Service Section -->
                         <section id="service-section">
                             <div class="container-md p-0">
@@ -321,7 +315,10 @@
                                 </div>
                             </div>
                         </section>
-                        <hr/>
+                        
+                        <div class="divider">
+                            <span class="divider-separator"></span>
+                        </div>
                     
                         <!-- Portfolio Section -->
                         <section id="Portfolio-section">
@@ -402,25 +399,37 @@
                             <div class="container-md p-0">
                                 <form id="contact-form" class="row m-0 justify-content-center">
                                     <div class="col-sm-6 col-lg-5" data-aos="zoom-in">
-                                        <input type="text" class="form-control name" placeholder="Name" name="name">
-                                        <input type="text" class="form-control email" placeholder="Email" name="email">
+                                        <div class="group name">
+                                            <div class="control">
+                                                <input type="text" placeholder="Name" name="name">
+                                            </div>
+                                        </div>
+                                        <div class="group email">
+                                            <div class="control">
+                                                <input type="text" placeholder="Email" name="email">
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="col-sm-6 col-lg-5" data-aos="zoom-in">
-                                        <textarea class="form-control message" placeholder="Message" name="message"></textarea>
+                                        <div class="group message">
+                                            <div class="control message">
+                                                <textarea  placeholder="Message" name="message"></textarea>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="col-12 py-4">
-                                        <div data-aos="zoom-in">
+                                    <div class="col-12 py-4 group">
+                                        <div data-aos="zoom-in" class=" control">
                                             <button type="submit" class="send-btn">
                                                 <span class="submit">Send Message</span>
-                                                <span class="loading"><img src="images/svg/arrows-rotate.svg" alt="SVG" class="svg"></span>
-                                                <span class="check"><img src="images/svg/check.svg" alt="SVG" class="svg"></span>
+                                                <span class="loading"><img src="./images/svg/arrows-rotate.svg" alt="SVG" class="svg"></span>
+                                                <span class="check"><img src="./images/svg/check.svg" alt="SVG" class="svg"></span>
                                             </button>
                                         </div>
                                     </div>
                                 </form>
                             </div>
                         </section>
-                    
+                        
                         <!-- Footer Section -->
                         <footer id="footer-section" style="background-image: url(&quot;./images/svg/patrn.svg&quot;);">
                             <div class="container-md">
